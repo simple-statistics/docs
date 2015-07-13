@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Simple Statistics | Documentation</title>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation simple-statistics'>
+  <div class='container'>
+    <div class='clearfix flex flex-stretch mxn2'>
+      <div class='px2 py2 col-3 sm-show font-smaller bg-white'>
+        <div class=''>
+          <a href='/' class='px2 h2 block button-transparent mb3'>Simple Statistics</a>
+          <div class='px2 clearfix'>
+            {{#each docs}}
+              <a
+                href='#{{permalink}}'
+                class='regular block'>
+                <code>{{name}}</code>
+              </a>
+              {{#each members.static}}
+                <a
+                  href='#{{permalink}}'
+                  class='px1 regular block'>
+                  <code>.{{name}}</code>
+                </a>
+              {{/each}}
+              {{#each members.instance}}
+                <a
+                  href='#{{permalink}}'
+                  class='px1 regular block'>
+                  <code>#{{name}}</code>
+                </a>
+              {{/each}}
+              {{#each events}}
+                <a
+                  href='#{{permalink}}'
+                  class='px1 regular block'>
+                  <code>ⓔ {{name}}</code>
+                </a>
+              {{/each}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      <div class='sm-col-8'>
+        <div class='flex-auto full-width'>
+          <div class='px3 py2'>
+{{#each docs ~}}{{> section}}{{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
