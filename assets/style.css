@@ -54,6 +54,10 @@ section:target {
   background: #fcfbf2;
 }
 
+body.simple-statistics th {
+  font-weight: normal;
+}
+
 .documentation,
 .documentation h1,
 .documentation h2,
