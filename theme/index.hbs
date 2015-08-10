@@ -61,6 +61,32 @@
         </div>
       </div>
       <div class='fix-margin-3'>
+        <div class='px2 py2 mb2'>
+          <p>Simple Statistics is a JavaScript library for statistical
+          computing, including descriptive statistics, classifiers, distributions,
+          regression, and clustering.</p>
+
+          <p>The library can be used with node.js by installing it from
+          npm:</p>
+          <pre class='overflow-auto'>npm install --save simple-statistics</pre>
+
+          <p>To use simple statistics in a client-side application,
+          you can either bundle it with <a href='http://browserify.org/'>browserify</a>
+          or <a href='https://webpack.github.io/'>webpack</a>, or
+          <a href='http://simplestatistics.org/#download'>download a source code package</a>.
+          </p>
+
+          <p>Once you've installed simple-statistics, you can use it in node/browserify/webpack
+          by requiring the package:</p>
+          <pre class='overflow-auto'>var ss = require('simple-statistics');</pre>
+          <p>Or if you've included a script tag on your webpage, the library
+          will be available under the <code>ss</code> variable automatically.
+          The methods documented below are available as methods off of this
+          object, like <code>ss.sum()</code> or <code>ss.mean()</code>. For
+          questions or bug reports,
+          <a href='https://github.com/simple-statistics/simple-statistics/issues'>visit the issue tracker.</a></p>
+
+        </div>
         <div class='px2'>
 {{#each docs ~}}<div class='py1'>{{> section}}</div>{{/each}}
         </div>
