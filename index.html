@@ -1,538 +1,535 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>Simple Statistics | Documentation</title>
+  <title> </title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
   <link href='assets/github.css' type='text/css' rel='stylesheet' />
 </head>
-<body class='documentation simple-statistics'>
+<body class='documentation'>
   <div class='container'>
-    <div class='clearfix flex flex-stretch mxn2'>
-      <div class='px2 py2 col-3 sm-show font-smaller bg-white'>
-        <div class=''>
-          <a href='/' class='px2 h2 block button-transparent mb3'>Simple Statistics</a>
-          <div class='px2 clearfix'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='px1 py1'>
+          <a href='http://simplestatistics.org/' class='h2 px2 button block button-transparent'>Simple Statistics</a>
+          <p class='px2 center'>
+            v1.0.0
+            <iframe src="https://ghbtns.com/github-btn.html?user=simple-statistics&amp;repo=simple-statistics&amp;type=star&amp;count=true&amp;size=small" frameborder="0" scrolling="0" width="100px" height="20px" style='vertical-align:middle'></iframe>
+          </p>
+          <p class='px2'>
+            Statistical methods in readable JavaScript for browsers, servers, and people.
+          </p>
+          <div class='px2'>
+            <input
+              placeholder='Filter'
+              id='filter-input'
+              class='col12 block field-light'
+              type='text' />
+          </div>
+          <div id='toc' class='px2'>
               <a
                 href='#bayesianclassifier'
-                class='regular block'>
-                <code>BayesianClassifier</code>
+                class='block bold'>
+                BayesianClassifier
               </a>
                 <a
                   href='#bayesianclassifier/score'
-                  class='px1 regular block'>
-                  <code>#score</code>
+                  class='regular block'>
+                  #score
                 </a>
                 <a
                   href='#bayesianclassifier/train'
-                  class='px1 regular block'>
-                  <code>#train</code>
+                  class='regular block'>
+                  #train
                 </a>
               <a
                 href='#perceptronmodel'
-                class='regular block'>
-                <code>PerceptronModel</code>
+                class='block bold'>
+                PerceptronModel
               </a>
                 <a
                   href='#perceptronmodel/predict'
-                  class='px1 regular block'>
-                  <code>#predict</code>
+                  class='regular block'>
+                  #predict
                 </a>
                 <a
                   href='#perceptronmodel/train'
-                  class='px1 regular block'>
-                  <code>#train</code>
+                  class='regular block'>
+                  #train
                 </a>
               <a
-                href='#sqrt-2pi'
-                class='regular block'>
-                <code>SQRT_2PI</code>
-              </a>
-              <a
                 href='#bernoullidistribution'
-                class='regular block'>
-                <code>bernoulliDistribution</code>
+                class='block bold'>
+                bernoulliDistribution
               </a>
               <a
                 href='#binomialdistribution'
-                class='regular block'>
-                <code>binomialDistribution</code>
+                class='block bold'>
+                binomialDistribution
               </a>
               <a
                 href='#chisquareddistributiontable'
-                class='regular block'>
-                <code>chiSquaredDistributionTable</code>
+                class='block bold'>
+                chiSquaredDistributionTable
               </a>
               <a
                 href='#chisquaredgoodnessoffit'
-                class='regular block'>
-                <code>chiSquaredGoodnessOfFit</code>
+                class='block bold'>
+                chiSquaredGoodnessOfFit
               </a>
               <a
                 href='#chunk'
-                class='regular block'>
-                <code>chunk</code>
+                class='block bold'>
+                chunk
+              </a>
+              <a
+                href='#ckmeans'
+                class='block bold'>
+                ckmeans
               </a>
               <a
                 href='#cumulativestdnormalprobability'
-                class='regular block'>
-                <code>cumulativeStdNormalProbability</code>
+                class='block bold'>
+                cumulativeStdNormalProbability
               </a>
               <a
                 href='#epsilon'
-                class='regular block'>
-                <code>epsilon</code>
+                class='block bold'>
+                epsilon
               </a>
               <a
                 href='#errorfunction'
-                class='regular block'>
-                <code>errorFunction</code>
+                class='block bold'>
+                errorFunction
               </a>
               <a
                 href='#factorial'
-                class='regular block'>
-                <code>factorial</code>
+                class='block bold'>
+                factorial
               </a>
               <a
                 href='#geometricmean'
-                class='regular block'>
-                <code>geometricMean</code>
+                class='block bold'>
+                geometricMean
               </a>
               <a
                 href='#harmonicmean'
-                class='regular block'>
-                <code>harmonicMean</code>
+                class='block bold'>
+                harmonicMean
               </a>
               <a
                 href='#interquartilerange'
-                class='regular block'>
-                <code>interquartileRange</code>
+                class='block bold'>
+                interquartileRange
               </a>
               <a
                 href='#inverseerrorfunction'
-                class='regular block'>
-                <code>inverseErrorFunction</code>
-              </a>
-              <a
-                href='#jenks'
-                class='regular block'>
-                <code>jenks</code>
+                class='block bold'>
+                inverseErrorFunction
               </a>
               <a
                 href='#linearregression'
-                class='regular block'>
-                <code>linearRegression</code>
+                class='block bold'>
+                linearRegression
               </a>
               <a
                 href='#linearregressionline'
-                class='regular block'>
-                <code>linearRegressionLine</code>
+                class='block bold'>
+                linearRegressionLine
               </a>
               <a
                 href='#mad'
-                class='regular block'>
-                <code>mad</code>
+                class='block bold'>
+                mad
               </a>
               <a
                 href='#max'
-                class='regular block'>
-                <code>max</code>
+                class='block bold'>
+                max
               </a>
               <a
                 href='#mean'
-                class='regular block'>
-                <code>mean</code>
+                class='block bold'>
+                mean
               </a>
               <a
                 href='#median'
-                class='regular block'>
-                <code>median</code>
+                class='block bold'>
+                median
               </a>
               <a
                 href='#min'
-                class='regular block'>
-                <code>min</code>
+                class='block bold'>
+                min
               </a>
               <a
                 href='#mixin'
-                class='regular block'>
-                <code>mixin</code>
+                class='block bold'>
+                mixin
               </a>
               <a
                 href='#mode'
-                class='regular block'>
-                <code>mode</code>
+                class='block bold'>
+                mode
+              </a>
+              <a
+                href='#numericsort'
+                class='block bold'>
+                numericSort
               </a>
               <a
                 href='#poissondistribution'
-                class='regular block'>
-                <code>poissonDistribution</code>
+                class='block bold'>
+                poissonDistribution
               </a>
               <a
                 href='#probit'
-                class='regular block'>
-                <code>probit</code>
+                class='block bold'>
+                probit
               </a>
               <a
                 href='#quantile'
-                class='regular block'>
-                <code>quantile</code>
+                class='block bold'>
+                quantile
               </a>
               <a
                 href='#quantilesorted'
-                class='regular block'>
-                <code>quantileSorted</code>
+                class='block bold'>
+                quantileSorted
               </a>
               <a
                 href='#rsquared'
-                class='regular block'>
-                <code>rSquared</code>
+                class='block bold'>
+                rSquared
               </a>
               <a
                 href='#rootmeansquare'
-                class='regular block'>
-                <code>rootMeanSquare</code>
+                class='block bold'>
+                rootMeanSquare
               </a>
               <a
                 href='#sample'
-                class='regular block'>
-                <code>sample</code>
+                class='block bold'>
+                sample
               </a>
               <a
                 href='#samplecorrelation'
-                class='regular block'>
-                <code>sampleCorrelation</code>
+                class='block bold'>
+                sampleCorrelation
               </a>
               <a
                 href='#samplecovariance'
-                class='regular block'>
-                <code>sampleCovariance</code>
+                class='block bold'>
+                sampleCovariance
               </a>
               <a
                 href='#sampleskewness'
-                class='regular block'>
-                <code>sampleSkewness</code>
+                class='block bold'>
+                sampleSkewness
               </a>
               <a
                 href='#samplestandarddeviation'
-                class='regular block'>
-                <code>sampleStandardDeviation</code>
+                class='block bold'>
+                sampleStandardDeviation
+              </a>
+              <a
+                href='#sorteduniquecount'
+                class='block bold'>
+                sortedUniqueCount
               </a>
               <a
                 href='#standarddeviation'
-                class='regular block'>
-                <code>standardDeviation</code>
+                class='block bold'>
+                standardDeviation
+              </a>
+              <a
+                href='#standardnormaltable'
+                class='block bold'>
+                standardNormalTable
               </a>
               <a
                 href='#sum'
-                class='regular block'>
-                <code>sum</code>
+                class='block bold'>
+                sum
               </a>
               <a
                 href='#sumnthpowerdeviations'
-                class='regular block'>
-                <code>sumNthPowerDeviations</code>
+                class='block bold'>
+                sumNthPowerDeviations
               </a>
               <a
                 href='#ttest'
-                class='regular block'>
-                <code>tTest</code>
+                class='block bold'>
+                tTest
               </a>
               <a
                 href='#ttesttwosample'
-                class='regular block'>
-                <code>tTestTwoSample</code>
+                class='block bold'>
+                tTestTwoSample
               </a>
               <a
                 href='#variance'
-                class='regular block'>
-                <code>variance</code>
+                class='block bold'>
+                variance
               </a>
               <a
                 href='#zscore'
-                class='regular block'>
-                <code>zScore</code>
+                class='block bold'>
+                zScore
               </a>
           </div>
         </div>
       </div>
-      <div class='sm-col-8'>
-        <div class='flex-auto full-width'>
-          <div class='px3 py2'>
-<section id='bayesianclassifier' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#bayesianclassifier'>
-      <code>
-        BayesianClassifier<span class='gray'></span>
-      </code>
-    </a>
+      <div class='fix-margin-3'>
+        <div class='px2 py2 mb2'>
+          <p>Simple Statistics is a JavaScript library for statistical
+          computing, including descriptive statistics, classifiers, distributions,
+          regression, and clustering.</p>
+
+          <p>The library can be used with node.js by installing it from
+          npm:</p>
+          <pre class='overflow-auto'>npm install --save simple-statistics</pre>
+
+          <p>To use simple statistics in a client-side application,
+          you can either bundle it with <a href='http://browserify.org/'>browserify</a>
+          or <a href='https://webpack.github.io/'>webpack</a>, or
+          <a href='http://simplestatistics.org/#download'>download a source code package</a>.
+          </p>
+
+          <p>Once you've installed simple-statistics, you can use it in node/browserify/webpack
+          by requiring the package:</p>
+          <pre class='overflow-auto'>var ss = require('simple-statistics');</pre>
+          <p>Or if you've included a script tag on your webpage, the library
+          will be available under the <code>ss</code> variable automatically.
+          The methods documented below are available as methods off of this
+          object, like <code>ss.sum()</code> or <code>ss.mean()</code>. For
+          questions or bug reports,
+          <a href='https://github.com/simple-statistics/simple-statistics/issues'>visit the issue tracker.</a></p>
+
+        </div>
+        <div class='px2'>
+<div class='py1'><section class='py2 clearfix'>
+  <h2 id='bayesianclassifier' class='mt0'>
+    BayesianClassifier<span class='gray'></span>
   </h2>
   <p><a href="http://en.wikipedia.org/wiki/Naive_Bayes_classifier">Bayesian Classifier</a></p>
 <p>This is a naïve bayesian classifier that takes
 singly-nested objects.</p>
 
-
-
-
-
-
-
-
-      <div class='section-smaller'>
-<section id='bayesianclassifier/score' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#bayesianclassifier/score'>
-      <code>
-        score<span class='gray'>(item)</span>
-      </code>
-    </a>
-  </h2>
-  <p>Generate a score of how well this item matches all
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> bayes = <span class="hljs-keyword">new</span> BayesianClassifier();
+bayes.train({
+  species: <span class="hljs-string">'Cat'</span>
+}, <span class="hljs-string">'animal'</span>);
+<span class="hljs-keyword">var</span> result = bayes.score({
+  species: <span class="hljs-string">'Cat'</span>
+})
+<span class="hljs-comment">// result</span>
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//   animal: 1</span>
+<span class="hljs-comment">// }</span></pre>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='bayesianclassifier/score'>
+          <a href='#bayesianclassifier/score'>
+            <code>
+              #score<span class='gray'>(item)</span>
+            </code>
+            <span class='force-inline'>
+              <p>Generate a score of how well this item matches all
 possible categories based on its attributes</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>item</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
-      <h4>Returns</h4>
-      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code></code>
-      :
-      <span class='force-inline'>
-        <p>of probabilities that this item belongs to a
-given category.</p>
-
-      </span>
-
-
-
-
-
-
-</section>
-      </div>
-      <div class='section-smaller'>
-<section id='bayesianclassifier/train' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#bayesianclassifier/train'>
-      <code>
-        train<span class='gray'>(item, category)</span>
-      </code>
-    </a>
-  </h2>
-  <h2>Train</h2>
-<p>Train the classifier with a new item, which has a single
+            </span>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='bayesianclassifier/score' class='mt0'>
+                score<span class='gray'>(item)</span>
+              </h2>
+              <p>Generate a score of how well this item matches all
+            possible categories based on its attributes</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>item</strong>
+                      :
+                      <span class='force-inline'>
+                        <p>an item in the same format as with train</p>
+            
+                      </span>
+                    </li>
+                </ul>
+                  <h4>Returns</h4>
+                  <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code></code>
+                  :
+                  <span class='force-inline'>
+                    <p>of probabilities that this item belongs to a
+            given category.</p>
+            
+                  </span>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='bayesianclassifier/train'>
+          <a href='#bayesianclassifier/train'>
+            <code>
+              #train<span class='gray'>(item, category)</span>
+            </code>
+            <span class='force-inline'>
+              <p>Train the classifier with a new item, which has a single
 dimension of Javascript literal keys and values.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>item</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>category</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
-
-
-
-
-
-
+            </span>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='bayesianclassifier/train' class='mt0'>
+                train<span class='gray'>(item, category)</span>
+              </h2>
+              <p>Train the classifier with a new item, which has a single
+            dimension of Javascript literal keys and values.</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>item</strong>
+                      :
+                      <span class='force-inline'>
+                        <p>an object with singly-deep properties</p>
+            
+                      </span>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>category</strong>
+                      :
+                      <span class='force-inline'>
+                        <p>the category this item belongs to</p>
+            
+                      </span>
+                    </li>
+                </ul>
+                  <h4>Returns</h4>
+                  <code></code>
+                  :
+                  <span class='force-inline'>
+                    <p>adds the item to the classifier</p>
+            
+                  </span>
+            </section>
+          </div>
+        </div>
 </section>
-      </div>
-
-
-</section>
-<section id='perceptronmodel' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#perceptronmodel'>
-      <code>
-        PerceptronModel<span class='gray'></span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='perceptronmodel' class='mt0'>
+    PerceptronModel<span class='gray'></span>
   </h2>
   <p>This is a single-layer <a href="http://en.wikipedia.org/wiki/Perceptron">Perceptron Classifier</a> that takes
 arrays of numbers and predicts whether they should be classified
 as either 0 or 1 (negative or positive examples).</p>
 
-
-
-
-
-
-
-
-      <div class='section-smaller'>
-<section id='perceptronmodel/predict' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#perceptronmodel/predict'>
-      <code>
-        predict<span class='gray'>(features)</span>
-      </code>
-    </a>
-  </h2>
-  <p><strong>Predict</strong>: Use an array of features with the weight array and bias
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-comment">// Create the model</span>
+<span class="hljs-keyword">var</span> p = <span class="hljs-keyword">new</span> PerceptronModel();
+<span class="hljs-comment">// Train the model with input with a diagonal boundary.</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+    p.train([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>], <span class="hljs-number">1</span>);
+    p.train([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], <span class="hljs-number">0</span>);
+    p.train([<span class="hljs-number">1</span>, <span class="hljs-number">0</span>], <span class="hljs-number">0</span>);
+    p.train([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], <span class="hljs-number">0</span>);
+}
+p.predict([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]); <span class="hljs-comment">// 0</span>
+p.predict([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// 0</span>
+p.predict([<span class="hljs-number">1</span>, <span class="hljs-number">0</span>]); <span class="hljs-comment">// 0</span>
+p.predict([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// 1</span></pre>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='perceptronmodel/predict'>
+          <a href='#perceptronmodel/predict'>
+            <code>
+              #predict<span class='gray'>(features)</span>
+            </code>
+            <span class='force-inline'>
+              <p><strong>Predict</strong>: Use an array of features with the weight array and bias
 to predict whether an example is labeled 0 or 1.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>features</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
-      <h4>Returns</h4>
-      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
-      :
-      <span class='force-inline'>
-        <p>1 if the score is over 0, otherwise 0</p>
-
-      </span>
-
-
-
-
-
-
-</section>
-      </div>
-      <div class='section-smaller'>
-<section id='perceptronmodel/train' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#perceptronmodel/train'>
-      <code>
-        train<span class='gray'>(features, label)</span>
-      </code>
-    </a>
-  </h2>
-  <p><strong>Train</strong> the classifier with a new example, which is
+            </span>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='perceptronmodel/predict' class='mt0'>
+                predict<span class='gray'>(features)</span>
+              </h2>
+              <p><strong>Predict</strong>: Use an array of features with the weight array and bias
+            to predict whether an example is labeled 0 or 1.</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>features</strong>
+                      :
+                      <span class='force-inline'>
+                        <p>an array of features as numbers</p>
+            
+                      </span>
+                    </li>
+                </ul>
+                  <h4>Returns</h4>
+                  <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
+                  :
+                  <span class='force-inline'>
+                    <p>1 if the score is over 0, otherwise 0</p>
+            
+                  </span>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='perceptronmodel/train'>
+          <a href='#perceptronmodel/train'>
+            <code>
+              #train<span class='gray'>(features, label)</span>
+            </code>
+            <span class='force-inline'>
+              <p><strong>Train</strong> the classifier with a new example, which is
 a numeric array of features and a 0 or 1 label.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>features</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>label</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>either 0 or 1</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
-      <h4>Returns</h4>
-      <code><code><a href="#perceptronmodel">PerceptronModel</a></code></code>
-      :
-      <span class='force-inline'>
-        <p>this</p>
-
-      </span>
-
-
-
-
-
-
+            </span>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='perceptronmodel/train' class='mt0'>
+                train<span class='gray'>(features, label)</span>
+              </h2>
+              <p><strong>Train</strong> the classifier with a new example, which is
+            a numeric array of features and a 0 or 1 label.</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>features</strong>
+                      :
+                      <span class='force-inline'>
+                        <p>an array of features as numbers</p>
+            
+                      </span>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>label</strong>
+                      :
+                      <span class='force-inline'>
+                        <p>either 0 or 1</p>
+            
+                      </span>
+                    </li>
+                </ul>
+                  <h4>Returns</h4>
+                  <code><code><a href="#perceptronmodel">PerceptronModel</a></code></code>
+                  :
+                  <span class='force-inline'>
+                    <p>this</p>
+            
+                  </span>
+            </section>
+          </div>
+        </div>
 </section>
-      </div>
-
-
-</section>
-<section id='sqrt-2pi' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#sqrt-2pi'>
-      <code>
-        SQRT_2PI<span class='gray'></span>
-      </code>
-    </a>
-  </h2>
-  <p>A standard normal table, also called the unit normal table or Z table,
-is a mathematical table for the values of Φ (phi), which are the values of
-the cumulative distribution function of the normal distribution.
-It is used to find the probability that a statistic is observed below,
-above, or between values on the standard normal distribution, and by
-extension, any normal distribution.</p>
-<p>The probabilities are calculated using formula from
-https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function
-The table used is the cumulative, and not cumulative from 0 to mean
-(even though the latter has 5 digits precision, instead of 4).</p>
-
-
-
-
-
-
-
-
-
-
-</section>
-<section id='bernoullidistribution' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#bernoullidistribution'>
-      <code>
-        bernoulliDistribution<span class='gray'>(p)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='bernoullidistribution' class='mt0'>
+    bernoulliDistribution<span class='gray'>(p)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli distribution</a>
 is the probability discrete
@@ -544,26 +541,16 @@ to mean &quot;tails&quot; (or vice versa). It is
 a special case of a Binomial Distribution
 where <code>n</code> = 1.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>p</strong>
+          :
+          <span class='force-inline'>
+            <p>input value, between 0 and 1 inclusive</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>p</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>input value, between 0 and 1 inclusive</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -571,53 +558,32 @@ where <code>n</code> = 1.</p>
         <p>value of bernoulli distribution at this point</p>
 
       </span>
-
-
-
-
-
-
 </section>
-<section id='binomialdistribution' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#binomialdistribution'>
-      <code>
-        binomialDistribution<span class='gray'>(trials, probability)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='binomialdistribution' class='mt0'>
+    binomialDistribution<span class='gray'>(trials, probability)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Binomial_distribution">Binomial Distribution</a> is the discrete probability
 distribution of the number of successes in a sequence of n independent yes/no experiments, each of which yields
 success with probability <code>probability</code>. Such a success/failure experiment is also called a Bernoulli experiment or
 Bernoulli trial; when trials = 1, the Binomial Distribution is a Bernoulli Distribution.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>trials</strong>
+          :
+          <span class='force-inline'>
+            <p>number of trials to simulate</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>trials</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>number of trials to simulate</p>
-</td>
-          </tr>
-          <tr>
-            <td>probability</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>probability</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -625,20 +591,10 @@ Bernoulli trial; when trials = 1, the Binomial Distribution is a Bernoulli Distr
         <p>output</p>
 
       </span>
-
-
-
-
-
-
 </section>
-<section id='chisquareddistributiontable' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#chisquareddistributiontable'>
-      <code>
-        chiSquaredDistributionTable<span class='gray'></span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='chisquareddistributiontable' class='mt0'>
+    chiSquaredDistributionTable<span class='gray'></span>
   </h2>
   <p><strong>Percentage Points of the χ2 (Chi-Squared) Distribution</strong></p>
 <p>The <a href="http://en.wikipedia.org/wiki/Chi-squared_distribution">χ2 (Chi-Squared) Distribution</a> is used in the common
@@ -648,23 +604,10 @@ deviation of a normal distribution from a sample standard deviation.</p>
 <p>Values from Appendix 1, Table III of William W. Hines &amp; Douglas C. Montgomery, &quot;Probability and Statistics in
 Engineering and Management Science&quot;, Wiley (1980).</p>
 
-
-
-
-
-
-
-
-
-
 </section>
-<section id='chisquaredgoodnessoffit' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#chisquaredgoodnessoffit'>
-      <code>
-        chiSquaredGoodnessOfFit<span class='gray'>(data, distributionType, significance)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='chisquaredgoodnessoffit' class='mt0'>
+    chiSquaredGoodnessOfFit<span class='gray'>(data, distributionType, significance)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Goodness_of_fit#Pearson.27s_chi-squared_test">χ2 (Chi-Squared) Goodness-of-Fit Test</a>
 uses a measure of goodness of fit which is the sum of differences between observed and expected outcome frequencies
@@ -675,41 +618,29 @@ takes the total number of observed frequencies and subtracts the number of estim
 follows, approximately, a chi-square distribution with (k − c) degrees of freedom where <code>k</code> is the number of non-empty
 cells and <code>c</code> is the number of estimated parameters for the distribution.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>data</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>distributionType</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
-            </td>
-            <td><p>a function that returns a point in a distribution:
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>data</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code> <strong>distributionType</strong>
+          :
+          <span class='force-inline'>
+            <p>a function that returns a point in a distribution:
 for instance, binomial, bernoulli, or poisson</p>
-</td>
-          </tr>
-          <tr>
-            <td>significance</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
 
-
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>significance</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -717,20 +648,21 @@ for instance, binomial, bernoulli, or poisson</p>
         <p>chi squared goodness of fit</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-comment">// Data from Poisson goodness-of-fit example 10-19 in William W. Hines &amp; Douglas C. Montgomery,</span>
+<span class="hljs-comment">// "Probability and Statistics in Engineering and Management Science", Wiley (1980).</span>
+<span class="hljs-keyword">var</span> data1019 = [
+    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+    <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>,
+    <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>,
+    <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>
+];
+ss.chiSquaredGoodnessOfFit(data1019, ss.poissonDistribution, <span class="hljs-number">0.05</span>)); <span class="hljs-comment">//= false</span></pre>
 </section>
-<section id='chunk' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#chunk'>
-      <code>
-        chunk<span class='gray'>(sample, chunkSize)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='chunk' class='mt0'>
+    chunk<span class='gray'>(sample, chunkSize)</span>
   </h2>
   <p>Split an array into chunks of a specified size. This function
 has the same behavior as <a href="http://php.net/manual/en/function.array-chunk.php">PHP's array_chunk</a>
@@ -739,49 +671,94 @@ the input size is not divisible by the chunk size.</p>
 <p><code>sample</code> is expected to be an array, and <code>chunkSize</code> a number.
 The <code>sample</code> array can contain any kind of data.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>sample</strong>
+          :
+          <span class='force-inline'>
+            <p>any array of values</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>sample</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>chunkSize</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>size of each output array</p>
-</td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>chunkSize</strong>
+          :
+          <span class='force-inline'>
+            <p>size of each output array</p>
 
+          </span>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>></code>
+      :
+      <span class='force-inline'>
+        <p>a chunked array</p>
 
-
-
+      </span>
     <h4>Examples</h4>
-<pre class='bg-white border'><span class="hljs-built_in">console</span>.log(chunk([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">2</span>)); <span class="hljs-comment">// [[1, 2], [3, 4]]</span></pre>
-
-
-
-
+<pre class='overflow-auto'><span class="hljs-built_in">console</span>.log(chunk([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">2</span>)); <span class="hljs-comment">// [[1, 2], [3, 4]]</span></pre>
 </section>
-<section id='cumulativestdnormalprobability' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#cumulativestdnormalprobability'>
-      <code>
-        cumulativeStdNormalProbability<span class='gray'>(z)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='ckmeans' class='mt0'>
+    ckmeans<span class='gray'>(data, nClusters)</span>
+  </h2>
+  <p>Ckmeans clustering is an improvement on heuristic-based clustering
+approaches like Jenks. The algorithm was developed in
+<a href="http://journal.r-project.org/archive/2011-2/RJournal_2011-2_Wang+Song.pdf">Haizhou Wang and Mingzhou Song</a>
+as a <a href="https://en.wikipedia.org/wiki/Dynamic_programming">dynamic programming</a> approach
+to the problem of clustering numeric data into groups with the least
+within-group sum-of-squared-deviations.</p>
+<p>Minimizing the difference within groups - what Wang &amp; Song refer to as
+<code>withinss</code>, or within sum-of-squares, means that groups are optimally
+homogenous within and the data is split into representative groups.
+This is very useful for visualization, where you may want to represent
+a continuous variable in discrete color or style groups. This function
+can provide groups that emphasize differences between data.</p>
+<p>Being a dynamic approach, this algorithm is based on two matrices that
+store incrementally-computed values for squared deviations and backtracking
+indexes.</p>
+<p>Unlike the <a href="https://cran.r-project.org/web/packages/Ckmeans.1d.dp/index.html">original implementation</a>,
+this implementation does not include any code to automatically determine
+the optimal number of clusters: this information needs to be explicitly
+provided.</p>
+<h3>References</h3>
+<p><em>Ckmeans.1d.dp: Optimal k-means Clustering in One Dimension by Dynamic
+Programming</em> Haizhou Wang and Mingzhou Song ISSN 2073-4859</p>
+<p>from The R Journal Vol. 3/2, December 2011</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>data</strong>
+          :
+          <span class='force-inline'>
+            <p>input data, as an array of number values</p>
+
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>nClusters</strong>
+          :
+          <span class='force-inline'>
+            <p>number of desired classes. This cannot be
+greater than the number of values in the data array.</p>
+
+          </span>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>></code>
+      :
+      <span class='force-inline'>
+        <p>clustered input</p>
+
+      </span>
+    <h4>Examples</h4>
+<pre class='overflow-auto'>ckmeans([-<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, -<span class="hljs-number">1</span>], <span class="hljs-number">3</span>);
+<span class="hljs-comment">// The input, clustered into groups of similar numbers.</span>
+<span class="hljs-comment">//= [[-1, -1, -1, -1], [2, 2, 2], [4, 5, 6]]);</span></pre>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='cumulativestdnormalprobability' class='mt0'>
+    cumulativeStdNormalProbability<span class='gray'>(z)</span>
   </h2>
   <p><strong><a href="http://en.wikipedia.org/wiki/Standard_normal_table">Cumulative Standard Normal Probability</a></strong></p>
 <p>Since probability tables cannot be
@@ -791,25 +768,15 @@ standard normal and then use the standard normal table to find probabilities.</p
 <p>You can use <code>.5 + .5 * errorFunction(x / Math.sqrt(2))</code> to calculate the probability
 instead of looking it up in a table.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>z</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>z</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -817,20 +784,10 @@ instead of looking it up in a table.</p>
         <p>cumulative standard normal probability</p>
 
       </span>
-
-
-
-
-
-
 </section>
-<section id='epsilon' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#epsilon'>
-      <code>
-        epsilon<span class='gray'></span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='epsilon' class='mt0'>
+    epsilon<span class='gray'></span>
   </h2>
   <p>We use <code>ε</code>, epsilon, as a stopping criterion when we want to iterate
 until we're &quot;close enough&quot;.</p>
@@ -838,95 +795,55 @@ until we're &quot;close enough&quot;.</p>
 the process of finding a value is <a href="https://en.wikipedia.org/wiki/Iterative_method">iterative</a>:
 it progresses until it is close enough.</p>
 
-
-
-
-
-
-
-
-
-
 </section>
-<section id='errorfunction' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#errorfunction'>
-      <code>
-        errorFunction<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='errorfunction' class='mt0'>
+    errorFunction<span class='gray'>(x)</span>
   </h2>
   <p><strong><a href="http://en.wikipedia.org/wiki/Error_function">Gaussian error function</a></strong></p>
 <p>The <code>errorFunction(x/(sd * Math.sqrt(2)))</code> is the probability that a value in a
 normal distribution with standard deviation sd is within x of the mean.</p>
 <p>This function returns a numerical approximation to the exact value.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
-      
+      :
       <span class='force-inline'>
-        
+        <p>error estimation</p>
+
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>errorFunction(<span class="hljs-number">1</span>); <span class="hljs-comment">//= 0.8427</span></pre>
 </section>
-<section id='factorial' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#factorial'>
-      <code>
-        factorial<span class='gray'>(n)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='factorial' class='mt0'>
+    factorial<span class='gray'>(n)</span>
   </h2>
   <p>A <a href="https://en.wikipedia.org/wiki/Factorial">Factorial</a>, usually written n!, is the product of all positive
 integers less than or equal to n. Often factorial is implemented
 recursively, but this iterative approach is significantly faster
 and simpler.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>n</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>n</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -934,49 +851,35 @@ and simpler.</p>
         <p>factorial: n!</p>
 
       </span>
-
-
     <h4>Examples</h4>
-<pre class='bg-white border'><span class="hljs-built_in">console</span>.log(factorial(<span class="hljs-number">5</span>)); <span class="hljs-comment">// 120</span></pre>
-
-
-
-
+<pre class='overflow-auto'><span class="hljs-built_in">console</span>.log(factorial(<span class="hljs-number">5</span>)); <span class="hljs-comment">// 120</span></pre>
 </section>
-<section id='geometricmean' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#geometricmean'>
-      <code>
-        geometricMean<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='geometricmean' class='mt0'>
+    geometricMean<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="https://en.wikipedia.org/wiki/Geometric_mean">Geometric Mean</a> is
 a mean function that is more useful for numbers in different
 ranges.</p>
-<p>this is the nth root of the input numbers multiplied by each other</p>
+<p>This is the nth root of the input numbers multiplied by each other.</p>
+<p>The geometric mean is often useful for
+<strong><a href="https://en.wikipedia.org/wiki/Geometric_mean#Proportional_growth">proportional growth</a></strong>: given
+growth rates for multiple years, like <em>80%, 16.66% and 42.85%</em>, a simple
+mean will incorrectly estimate an average growth rate, whereas a geometric
+mean will correctly estimate a growth rate that, over those years,
+will yield the same end value.</p>
 <p>This runs on <code>O(n)</code>, linear time in respect to the array</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input array</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input array</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -984,49 +887,42 @@ ranges.</p>
         <p>geometric mean</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> growthRates = [<span class="hljs-number">1.80</span>, <span class="hljs-number">1.166666</span>, <span class="hljs-number">1.428571</span>];
+<span class="hljs-keyword">var</span> averageGrowth = geometricMean(growthRates);
+<span class="hljs-keyword">var</span> averageGrowthRates = [averageGrowth, averageGrowth, averageGrowth];
+<span class="hljs-keyword">var</span> startingValue = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">var</span> startingValueMean = <span class="hljs-number">10</span>;
+growthRates.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rate</span>) </span>{
+  startingValue *= rate;
+});
+averageGrowthRates.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">rate</span>) </span>{
+  startingValueMean *= rate;
+});
+startingValueMean === startingValue;</pre>
 </section>
-<section id='harmonicmean' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#harmonicmean'>
-      <code>
-        harmonicMean<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='harmonicmean' class='mt0'>
+    harmonicMean<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="https://en.wikipedia.org/wiki/Harmonic_mean">Harmonic Mean</a> is
-a mean function typically used to find the average of rates
-this is the reciprocal of the arithmetic mean of the reciprocals
-of the input numbers.</p>
+a mean function typically used to find the average of rates.
+This mean is calculated by taking the reciprocal of the arithmetic mean
+of the reciprocals of the input numbers.</p>
 <p>This is a <a href="https://en.wikipedia.org/wiki/Central_tendency">measure of central tendency</a>:
 a method of finding a typical or central value of a set of numbers.</p>
-<p>This runs on <code>O(n)</code>, linear time in respect to the array</p>
+<p>This runs on <code>O(n)</code>, linear time in respect to the array.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1034,45 +930,27 @@ a method of finding a typical or central value of a set of numbers.</p>
         <p>harmonic mean</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>ss.harmonicMean([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">//= 2.4</span></pre>
 </section>
-<section id='interquartilerange' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#interquartilerange'>
-      <code>
-        interquartileRange<span class='gray'>(sample)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='interquartilerange' class='mt0'>
+    interquartileRange<span class='gray'>(sample)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Interquartile_range">Interquartile range</a> is
 a measure of statistical dispersion, or how scattered, spread, or
 concentrated a distribution is. It's computed as the difference between
 the third quartile and first quartile.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>sample</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>sample</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1081,45 +959,27 @@ the third quartile and first quartile.</p>
 0.25 and 0.75</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>interquartileRange([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//= 2</span></pre>
 </section>
-<section id='inverseerrorfunction' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#inverseerrorfunction'>
-      <code>
-        inverseErrorFunction<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='inverseerrorfunction' class='mt0'>
+    inverseErrorFunction<span class='gray'>(x)</span>
   </h2>
   <p>The Inverse <a href="http://en.wikipedia.org/wiki/Error_function">Gaussian error function</a>
 returns a numerical approximation to the value that would have caused
 <code>errorFunction()</code> to return x.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>value of error function</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>value of error function</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1127,105 +987,27 @@ returns a numerical approximation to the value that would have caused
         <p>estimated inverted value</p>
 
       </span>
-
-
-
-
-
-
 </section>
-<section id='jenks' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#jenks'>
-      <code>
-        jenks<span class='gray'>(data, nClasses)</span>
-      </code>
-    </a>
-  </h2>
-  <p>The <strong><a href="http://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization">jenks natural breaks optimization</a></strong>
-is an algorithm commonly used in cartography and visualization to decide
-upon groupings of data values that minimize variance within themselves
-and maximize variation between themselves.</p>
-<p>For instance, cartographers often use jenks in order to choose which
-values are assigned to which colors in a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth</a>
-map.</p>
-
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>data</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input data, as an array of number values</p>
-</td>
-          </tr>
-          <tr>
-            <td>nClasses</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>number of desired classes</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
-      <h4>Returns</h4>
-      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>></code>
-      :
-      <span class='force-inline'>
-        <p>array of class break positions</p>
-
-      </span>
-
-
-
-
-
-
-</section>
-<section id='linearregression' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#linearregression'>
-      <code>
-        linearRegression<span class='gray'>(data)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='linearregression' class='mt0'>
+    linearRegression<span class='gray'>(data)</span>
   </h2>
   <p><a href="http://en.wikipedia.org/wiki/Simple_linear_regression">Simple linear regression</a>
 is a simple way to find a fitted line
 between a set of coordinates. This algorithm finds the slope and y-intercept of a regression line
 using the least sum of squares.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>data</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>>
-            </td>
-            <td><p>an array of two-element of arrays,
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>> <strong>data</strong>
+          :
+          <span class='force-inline'>
+            <p>an array of two-element of arrays,
 like <code>[[0, 1], [2, 3]]</code></p>
-</td>
-          </tr>
-      </table>
-    </p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code></code>
       :
@@ -1233,47 +1015,29 @@ like <code>[[0, 1], [2, 3]]</code></p>
         <p>object containing slope and intersect of regression line</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>linearRegression([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]); <span class="hljs-comment">// { m: 1, b: 0 }</span></pre>
 </section>
-<section id='linearregressionline' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#linearregressionline'>
-      <code>
-        linearRegressionLine<span class='gray'>(mb)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='linearregressionline' class='mt0'>
+    linearRegressionLine<span class='gray'>(mb)</span>
   </h2>
   <p>Given the output of <code>linearRegression</code>: an object
 with <code>m</code> and <code>b</code> values indicating slope and intercept,
 respectively, generate a line function that translates
 x values into y values.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>mb</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
-            </td>
-            <td><p>object with <code>m</code> and <code>b</code> members, representing
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>mb</strong>
+          :
+          <span class='force-inline'>
+            <p>object with <code>m</code> and <code>b</code> members, representing
 slope and intersect of desired line</p>
-</td>
-          </tr>
-      </table>
-    </p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code></code>
       :
@@ -1282,45 +1046,29 @@ slope and intersect of desired line</p>
 x-value on the line.</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> l = linearRegressionLine(linearRegression([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]));
+l(<span class="hljs-number">0</span>) <span class="hljs-comment">//= 0</span>
+l(<span class="hljs-number">2</span>) <span class="hljs-comment">//= 2</span></pre>
 </section>
-<section id='mad' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#mad'>
-      <code>
-        mad<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='mad' class='mt0'>
+    mad<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Median_absolute_deviation">Median Absolute Deviation</a> is
 a robust measure of statistical
 dispersion. It is more resilient to outliers than the standard deviation.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input array</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input array</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1328,44 +1076,26 @@ dispersion. It is more resilient to outliers than the standard deviation.</p>
         <p>median absolute deviation</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>mad([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>]); <span class="hljs-comment">//= 1</span></pre>
 </section>
-<section id='max' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#max'>
-      <code>
-        max<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='max' class='mt0'>
+    max<span class='gray'>(x)</span>
   </h2>
   <p>This computes the maximum number in an array.</p>
 <p>This runs on <code>O(n)</code>, linear time in respect to the array</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1373,22 +1103,12 @@ dispersion. It is more resilient to outliers than the standard deviation.</p>
         <p>maximum value</p>
 
       </span>
-
-
     <h4>Examples</h4>
-<pre class='bg-white border'><span class="hljs-built_in">console</span>.log(max([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])); <span class="hljs-comment">// 4</span></pre>
-
-
-
-
+<pre class='overflow-auto'><span class="hljs-built_in">console</span>.log(max([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])); <span class="hljs-comment">// 4</span></pre>
 </section>
-<section id='mean' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#mean'>
-      <code>
-        mean<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='mean' class='mt0'>
+    mean<span class='gray'>(x)</span>
   </h2>
   <p>The mean, <em>also known as average</em>,
 is the sum of all values over the number of values.
@@ -1396,26 +1116,16 @@ This is a <a href="https://en.wikipedia.org/wiki/Central_tendency">measure of ce
 a method of finding a typical or central value of a set of numbers.</p>
 <p>This runs on <code>O(n)</code>, linear time in respect to the array</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input values</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input values</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1423,49 +1133,32 @@ a method of finding a typical or central value of a set of numbers.</p>
         <p>mean</p>
 
       </span>
-
-
     <h4>Examples</h4>
-<pre class='bg-white border'><span class="hljs-built_in">console</span>.log(mean([<span class="hljs-number">0</span>, <span class="hljs-number">10</span>])); <span class="hljs-comment">// 5</span></pre>
-
-
-
-
+<pre class='overflow-auto'><span class="hljs-built_in">console</span>.log(mean([<span class="hljs-number">0</span>, <span class="hljs-number">10</span>])); <span class="hljs-comment">// 5</span></pre>
 </section>
-<section id='median' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#median'>
-      <code>
-        median<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='median' class='mt0'>
+    median<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Median">median</a> is
 the middle number of a list. This is often a good indicator of 'the middle'
 when there are outliers that skew the <code>mean()</code> value.
 This is a <a href="https://en.wikipedia.org/wiki/Central_tendency">measure of central tendency</a>:
 a method of finding a typical or central value of a set of numbers.</p>
+<p>The median isn't necessarily one of the elements in the list: the value
+can be the average of two elements if the list has an even length
+and the two central values are different.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1473,43 +1166,26 @@ a method of finding a typical or central value of a set of numbers.</p>
         <p>median value</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> incomes = [<span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+median(incomes); <span class="hljs-comment">//= 3.5</span></pre>
 </section>
-<section id='min' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#min'>
-      <code>
-        min<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='min' class='mt0'>
+    min<span class='gray'>(x)</span>
   </h2>
   <p>The min is the lowest number in the array. This runs on <code>O(n)</code>, linear time in respect to the array</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1517,74 +1193,53 @@ a method of finding a typical or central value of a set of numbers.</p>
         <p>minimum value</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>min([<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, -<span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">// -100</span></pre>
 </section>
-<section id='mixin' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#mixin'>
-      <code>
-        mixin<span class='gray'>(ss, [array])</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='mixin' class='mt0'>
+    mixin<span class='gray'>(ss, [array])</span>
   </h2>
   <p><strong>Mixin</strong> simple_statistics to a single Array instance if provided
 or the Array native object if not. This is an optional
 feature that lets you treat simple_statistics as a native feature
 of Javascript.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>ss</strong>
+          :
+          <span class='force-inline'>
+            <p>simple statistics</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>ss</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
-            </td>
-            <td><p>simple statistics</p>
-</td>
-          </tr>
-          <tr>
-            <td>array</td>
-            <td>
-              <code>[<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>]</code>
-            </td>
-            <td><p>a single array instance which will be augmented
+          </span>
+        </li>
+        <li><code>[<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>]</code> <strong>array</strong>
+          :
+          <span class='force-inline'>
+            <p>a single array instance which will be augmented
 with the extra methods. If omitted, mixin will apply to all arrays
 by changing the global <code>Array.prototype</code>.</p>
-</td>
-          </tr>
-      </table>
-    </p>
 
+          </span>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code>Any</code>
+      :
+      <span class='force-inline'>
+        <p>the extended Array, or Array.prototype if no object
+is given.</p>
 
-
-
+      </span>
     <h4>Examples</h4>
-<pre class='bg-white border'><span class="hljs-keyword">var</span> myNumbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> myNumbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
 mixin(ss, myNumbers);
 <span class="hljs-built_in">console</span>.log(myNumbers.sum()); <span class="hljs-comment">// 6</span></pre>
-
-
-
-
 </section>
-<section id='mode' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#mode'>
-      <code>
-        mode<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='mode' class='mt0'>
+    mode<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="http://bit.ly/W5K4Yt">mode</a> is the number that appears in a list the highest number of times.
 There can be multiple modes in a list: in the event of a tie, this
@@ -1593,26 +1248,16 @@ algorithm will return the most recently seen mode.</p>
 a method of finding a typical or central value of a set of numbers.</p>
 <p>This runs on <code>O(n)</code>, linear time in respect to the array.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1620,20 +1265,44 @@ a method of finding a typical or central value of a set of numbers.</p>
         <p>mode</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>mode([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//= 0</span></pre>
 </section>
-<section id='poissondistribution' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#poissondistribution'>
-      <code>
-        poissonDistribution<span class='gray'>(position)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='numericsort' class='mt0'>
+    numericSort<span class='gray'>(array)</span>
+  </h2>
+  <p>Sort an array of numbers by their numeric value, ensuring that the
+array is not changed in place.</p>
+<p>This is necessary because the default behavior of .sort
+in JavaScript is to sort arrays as string values</p>
+<pre><code>[1, 10, 12, 102, 20].sort()
+// output
+[1, 10, 102, 12, 20]</code></pre>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>array</strong>
+          :
+          <span class='force-inline'>
+            <p>input array</p>
+
+          </span>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>></code>
+      :
+      <span class='force-inline'>
+        <p>sorted array</p>
+
+      </span>
+    <h4>Examples</h4>
+<pre class='overflow-auto'>numericSort([<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]) <span class="hljs-comment">// [1, 2, 3]</span></pre>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='poissondistribution' class='mt0'>
+    poissonDistribution<span class='gray'>(lambda)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Poisson_distribution">Poisson Distribution</a>
 is a discrete probability distribution that expresses the probability
@@ -1643,26 +1312,16 @@ independently of the time since the last event.</p>
 <p>The Poisson Distribution is characterized by the strictly positive
 mean arrival or occurrence rate, <code>λ</code>.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>lambda</strong>
+          :
+          <span class='force-inline'>
+            <p>location poisson distribution</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>position</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>location poisson distribution</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1670,20 +1329,10 @@ mean arrival or occurrence rate, <code>λ</code>.</p>
         <p>value of poisson distribution at that point</p>
 
       </span>
-
-
-
-
-
-
 </section>
-<section id='probit' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#probit'>
-      <code>
-        probit<span class='gray'>(p)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='probit' class='mt0'>
+    probit<span class='gray'>(p)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Probit">Probit</a>
 is the inverse of cumulativeStdNormalProbability(),
@@ -1693,25 +1342,15 @@ where the p'th quantile of values can be found in a normal distribution.
 So, for example, probit(0.5 + 0.6827/2) ≈ 1 because 68.27% of values are
 normally found within 1 standard deviation above or below the mean.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>p</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>p</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1719,24 +1358,14 @@ normally found within 1 standard deviation above or below the mean.</p>
         <p>probit</p>
 
       </span>
-
-
-
-
-
-
 </section>
-<section id='quantile' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#quantile'>
-      <code>
-        quantile<span class='gray'>(sample, p)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='quantile' class='mt0'>
+    quantile<span class='gray'>(sample, p)</span>
   </h2>
   <p>The <a href="https://en.wikipedia.org/wiki/Quantile">quantile</a>:
 this is a population quantile, since we assume to know the entire
-dataset in this library. Thus I'm trying to follow the
+dataset in this library. This is an implementation of the
 <a href="http://en.wikipedia.org/wiki/Quantile#Quantiles_of_a_population">Quantiles of a Population</a>
 algorithm from wikipedia.</p>
 <p>Sample is a one-dimensional array of numbers,
@@ -1747,32 +1376,23 @@ with decimal values.
 When p is an array, the result of the function is also an array containing the appropriate
 quantiles in input order</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>sample</strong>
+          :
+          <span class='force-inline'>
+            <p>a sample from the population</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>sample</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>p</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>p</strong>
+          :
+          <span class='force-inline'>
+            <p>the desired quantile, as a number between 0 and 1</p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1780,53 +1400,37 @@ quantiles in input order</p>
         <p>quantile</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> data = [<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">20</span>];
+quantile(data, <span class="hljs-number">1</span>); <span class="hljs-comment">//= max(data);</span>
+quantile(data, <span class="hljs-number">0</span>); <span class="hljs-comment">//= min(data);</span>
+quantile(data, <span class="hljs-number">0.5</span>); <span class="hljs-comment">//= 9</span></pre>
 </section>
-<section id='quantilesorted' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#quantilesorted'>
-      <code>
-        quantileSorted<span class='gray'>(sample, p)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='quantilesorted' class='mt0'>
+    quantileSorted<span class='gray'>(sample, p)</span>
   </h2>
   <p>This is the internal implementation of quantiles: when you know
 that the order is sorted, you don't need to re-sort it, and the computations
-are much faster.</p>
+are faster.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>sample</strong>
+          :
+          <span class='force-inline'>
+            <p>input data</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>sample</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input data</p>
-</td>
-          </tr>
-          <tr>
-            <td>p</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>desired quantile: a number between 0 to 1, inclusive</p>
-</td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>p</strong>
+          :
+          <span class='force-inline'>
+            <p>desired quantile: a number between 0 to 1, inclusive</p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1834,54 +1438,38 @@ are much faster.</p>
         <p>quantile value</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> data = [<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">20</span>];
+quantileSorted(data, <span class="hljs-number">1</span>); <span class="hljs-comment">//= max(data);</span>
+quantileSorted(data, <span class="hljs-number">0</span>); <span class="hljs-comment">//= min(data);</span>
+quantileSorted(data, <span class="hljs-number">0.5</span>); <span class="hljs-comment">//= 9</span></pre>
 </section>
-<section id='rsquared' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#rsquared'>
-      <code>
-        rSquared<span class='gray'>(data, f)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='rsquared' class='mt0'>
+    rSquared<span class='gray'>(data, func)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Coefficient_of_determination">R Squared</a>
 value of data compared with a function <code>f</code>
 is the sum of the squared differences between the prediction
 and the actual value.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>> <strong>data</strong>
+          :
+          <span class='force-inline'>
+            <p>input data: this should be doubly-nested</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>data</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>>
-            </td>
-            <td><p>input data: this should be doubly-nested</p>
-</td>
-          </tr>
-          <tr>
-            <td>f</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>
-            </td>
-            <td><p>function called on <code>[i][0]</code> values within the dataset</p>
-</td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code> <strong>func</strong>
+          :
+          <span class='force-inline'>
+            <p>function called on <code>[i][0]</code> values within the dataset</p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1889,20 +1477,14 @@ and the actual value.</p>
         <p>r-squared value</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> samples = [[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]];
+<span class="hljs-keyword">var</span> regressionLine = linearRegressionLine(linearRegression(samples));
+rSquared(samples, regressionLine); <span class="hljs-comment">//= 1 this line is a perfect fit</span></pre>
 </section>
-<section id='rootmeansquare' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#rootmeansquare'>
-      <code>
-        rootMeanSquare<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='rootmeansquare' class='mt0'>
+    rootMeanSquare<span class='gray'>(x)</span>
   </h2>
   <p>The Root Mean Square (RMS) is
 a mean function used as a measure of the magnitude of a set
@@ -1911,26 +1493,16 @@ This is the square root of the mean of the squares of the
 input numbers.
 This runs on <code>O(n)</code>, linear time in respect to the array</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -1938,62 +1510,44 @@ This runs on <code>O(n)</code>, linear time in respect to the array</p>
         <p>root mean square</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>rootMeanSquare([-<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//= 1</span></pre>
 </section>
-<section id='sample' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#sample'>
-      <code>
-        sample<span class='gray'>(array, n, [randomSource])</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='sample' class='mt0'>
+    sample<span class='gray'>(array, n, [randomSource])</span>
   </h2>
   <p>Create a <a href="http://en.wikipedia.org/wiki/Simple_random_sample">simple random sample</a>
 from a given array of <code>n</code> elements.</p>
+<p>The sampled values will be in any order, not necessarily the order
+they appear in the input.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>array</strong>
+          :
+          <span class='force-inline'>
+            <p>input array. can contain any type</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>array</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>
-            </td>
-            <td><p>input array. can contain any type</p>
-</td>
-          </tr>
-          <tr>
-            <td>n</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>count of how many elements to take</p>
-</td>
-          </tr>
-          <tr>
-            <td>randomSource</td>
-            <td>
-              <code>[<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>]</code>
-                (default <code>Math.random</code>)
-            </td>
-            <td><p>an optional source of entropy
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>n</strong>
+          :
+          <span class='force-inline'>
+            <p>count of how many elements to take</p>
+
+          </span>
+        </li>
+        <li><code>[<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>]</code> <strong>randomSource</strong>
+            (default <code>Math.random</code>)
+          :
+          <span class='force-inline'>
+            <p>an optional source of entropy
 instead of Math.random</p>
-</td>
-          </tr>
-      </table>
-    </p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code></code>
       :
@@ -2001,52 +1555,34 @@ instead of Math.random</p>
         <p>subset of n elements in original array</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> values = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+sample(values, <span class="hljs-number">3</span>); <span class="hljs-comment">// returns 3 random values, like [2, 5, 8];</span></pre>
 </section>
-<section id='samplecorrelation' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#samplecorrelation'>
-      <code>
-        sampleCorrelation<span class='gray'>(x, y)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='samplecorrelation' class='mt0'>
+    sampleCorrelation<span class='gray'>(x, y)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Correlation_and_dependence">correlation</a> is
 a measure of how correlated two datasets are, between -1 and 1</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>first input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>first input</p>
-</td>
-          </tr>
-          <tr>
-            <td>y</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>second input</p>
-</td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>y</strong>
+          :
+          <span class='force-inline'>
+            <p>second input</p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2054,53 +1590,36 @@ a measure of how correlated two datasets are, between -1 and 1</p>
         <p>sample correlation</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+<span class="hljs-keyword">var</span> b = [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">60</span>];
+sampleCorrelation(a, b); <span class="hljs-comment">//= 0.691</span></pre>
 </section>
-<section id='samplecovariance' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#samplecovariance'>
-      <code>
-        sampleCovariance<span class='gray'>(x, y)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='samplecovariance' class='mt0'>
+    sampleCovariance<span class='gray'>(x, y)</span>
   </h2>
   <p><a href="https://en.wikipedia.org/wiki/Sample_mean_and_sampleCovariance">Sample covariance</a> of two datasets:
 how much do the two datasets move together?
 x and y are two datasets, represented as arrays of numbers.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>first input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>first input</p>
-</td>
-          </tr>
-          <tr>
-            <td>y</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>second input</p>
-</td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>y</strong>
+          :
+          <span class='force-inline'>
+            <p>second input</p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2108,20 +1627,14 @@ x and y are two datasets, represented as arrays of numbers.</p>
         <p>sample covariance</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> x = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+<span class="hljs-keyword">var</span> y = [<span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
+sampleCovariance(x, y); <span class="hljs-comment">//= -3.5</span></pre>
 </section>
-<section id='sampleskewness' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#sampleskewness'>
-      <code>
-        sampleSkewness<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='sampleskewness' class='mt0'>
+    sampleSkewness<span class='gray'>(x)</span>
   </h2>
   <p><a href="http://en.wikipedia.org/wiki/Skewness">Skewness</a> is
 a measure of the extent to which a probability distribution of a
@@ -2131,26 +1644,16 @@ The skewness value can be positive or negative, or even undefined.</p>
 moment coefficient, which is the version found in Excel and several
 statistical packages including Minitab, SAS and SPSS.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2158,44 +1661,27 @@ statistical packages including Minitab, SAS and SPSS.</p>
         <p>sample skewness</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> data = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>];
+sampleSkewness(data); <span class="hljs-comment">//= 0.5901286564</span></pre>
 </section>
-<section id='samplestandarddeviation' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#samplestandarddeviation'>
-      <code>
-        sampleStandardDeviation<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='samplestandarddeviation' class='mt0'>
+    sampleStandardDeviation<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a>
 is the square root of the variance.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input array</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input array</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2203,44 +1689,62 @@ is the square root of the variance.</p>
         <p>sample standard deviation</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>ss.sampleStandardDeviation([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]);
+<span class="hljs-comment">//= 2.138</span></pre>
 </section>
-<section id='standarddeviation' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#standarddeviation'>
-      <code>
-        standardDeviation<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='sorteduniquecount' class='mt0'>
+    sortedUniqueCount<span class='gray'>(input)</span>
+  </h2>
+  <p>For a sorted input, counting the number of unique values
+is possible in constant time and constant memory. This is
+a simple implementation of the algorithm.</p>
+<p>Values are compared with <code>===</code>, so objects and non-primitive objects
+are not handled in any special way.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>input</strong>
+          :
+          <span class='force-inline'>
+            <p>an array of primitive values.</p>
+
+          </span>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
+      :
+      <span class='force-inline'>
+        <p>count of unique values</p>
+
+      </span>
+    <h4>Examples</h4>
+<pre class='overflow-auto'>sortedUniqueCount([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// 3</span>
+sortedUniqueCount([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// 1</span></pre>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='standarddeviation' class='mt0'>
+    standardDeviation<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a>
-is the square root of the variance.</p>
+is the square root of the variance. It's useful for measuring the amount
+of variation or dispersion in a set of values.</p>
+<p>Standard deviation is only appropriate for full-population knowledge: for
+samples of a population, <a href="samplestandarddeviation"><code>sampleStandardDeviation</code></a> is
+more appropriate.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2248,45 +1752,45 @@ is the square root of the variance.</p>
         <p>standard deviation</p>
 
       </span>
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> scores = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
+variance(scores); <span class="hljs-comment">//= 4</span>
+standardDeviation(scores); <span class="hljs-comment">//= 2</span></pre>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='standardnormaltable' class='mt0'>
+    standardNormalTable<span class='gray'></span>
+  </h2>
+  <p>A standard normal table, also called the unit normal table or Z table,
+is a mathematical table for the values of Φ (phi), which are the values of
+the cumulative distribution function of the normal distribution.
+It is used to find the probability that a statistic is observed below,
+above, or between values on the standard normal distribution, and by
+extension, any normal distribution.</p>
+<p>The probabilities are calculated using the
+<a href="https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function">Cumulative distribution function</a>.
+The table used is the cumulative, and not cumulative from 0 to mean
+(even though the latter has 5 digits precision, instead of 4).</p>
 
 </section>
-<section id='sum' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#sum'>
-      <code>
-        sum<span class='gray'>(x)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='sum' class='mt0'>
+    sum<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="https://en.wikipedia.org/wiki/Summation">sum</a> of an array
 is the result of adding all numbers together, starting from zero.</p>
 <p>This runs on <code>O(n)</code>, linear time in respect to the array</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td><p>input</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2294,54 +1798,33 @@ is the result of adding all numbers together, starting from zero.</p>
         <p>sum of all input numbers</p>
 
       </span>
-
-
     <h4>Examples</h4>
-<pre class='bg-white border'><span class="hljs-built_in">console</span>.log(sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])); <span class="hljs-comment">// 6</span></pre>
-
-
-
-
+<pre class='overflow-auto'><span class="hljs-built_in">console</span>.log(sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])); <span class="hljs-comment">// 6</span></pre>
 </section>
-<section id='sumnthpowerdeviations' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#sumnthpowerdeviations'>
-      <code>
-        sumNthPowerDeviations<span class='gray'>(input, n)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='sumnthpowerdeviations' class='mt0'>
+    sumNthPowerDeviations<span class='gray'>(x, n)</span>
   </h2>
   <p>The sum of deviations to the Nth power.
 When n=2 it's the sum of squared deviations.
 When n=3 it's the sum of cubed deviations.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>n</strong>
+          :
+          <span class='force-inline'>
+            <p>power</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>input</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>n</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td><p>power</p>
-</td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2349,22 +1832,17 @@ When n=3 it's the sum of cubed deviations.</p>
         <p>sum of nth power deviations</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> input = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-comment">// since the variance of a set is the mean squared</span>
+<span class="hljs-comment">// deviations, we can calculate that with sumNthPowerDeviations:</span>
+<span class="hljs-keyword">var</span> variance = sumNthPowerDeviations(input) / input.length;</pre>
 </section>
-<section id='ttest' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#ttest'>
-      <code>
-        tTest<span class='gray'>(sample)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='ttest' class='mt0'>
+    tTest<span class='gray'>(sample, x)</span>
   </h2>
-  <p>This is to compute a one-sample t-test, comparing the mean
+  <p>This is to compute <a href="https://en.wikipedia.org/wiki/Student's_t-test#One-sample_t-test">a one-sample t-test</a>, comparing the mean
 of a sample to a known value, x.</p>
 <p>in this case, we're trying to determine whether the
 population mean is equal to the value that we know, which is <code>x</code>
@@ -2373,25 +1851,23 @@ here. usually the results here are used to look up a
 a certain level of significance, will let you determine that the
 null hypothesis can or cannot be rejected.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>sample</strong>
+          :
+          <span class='force-inline'>
+            <p>an array of numbers as input</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>sample</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>expected vale of the population mean</p>
 
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2399,20 +1875,12 @@ null hypothesis can or cannot be rejected.</p>
         <p>value</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>tTest([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], <span class="hljs-number">3.385</span>); <span class="hljs-comment">//= 0.16494154</span></pre>
 </section>
-<section id='ttesttwosample' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#ttesttwosample'>
-      <code>
-        tTestTwoSample<span class='gray'>(sampleX, sampleY, [difference])</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='ttesttwosample' class='mt0'>
+    tTestTwoSample<span class='gray'>(sampleX, sampleY, [difference])</span>
   </h2>
   <p>This is to compute <a href="http://en.wikipedia.org/wiki/Student's_t-test">two sample t-test</a>.
 Tests whether &quot;mean(X)-mean(Y) = difference&quot;, (
@@ -2429,85 +1897,59 @@ null hypothesis can or cannot be rejected.</p>
 a null hypothesis that the two populations that have been sampled into
 <code>sampleX</code> and <code>sampleY</code> are equal to each other.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>sampleX</strong>
+          :
+          <span class='force-inline'>
+            <p>a sample as an array of numbers</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>sampleX</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>sampleY</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>difference</td>
-            <td>
-              <code>[<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>]</code>
-                (default <code>0</code>)
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>sampleY</strong>
+          :
+          <span class='force-inline'>
+            <p>a sample as an array of numbers</p>
 
-
+          </span>
+        </li>
+        <li><code>[<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>]</code> <strong>difference</strong>
+            (default <code>0</code>)
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
-      
+      :
       <span class='force-inline'>
-        
+        <p>test result</p>
+
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>ss.tTestTwoSample([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], <span class="hljs-number">0</span>); <span class="hljs-comment">//= -2.1908902300206643</span></pre>
 </section>
-<section id='variance' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#variance'>
-      <code>
-        variance<span class='gray'>(input)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='variance' class='mt0'>
+    variance<span class='gray'>(x)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Variance">variance</a>
 is the sum of squared deviations from the mean.</p>
 <p>This is an implementation of variance, not sample variance:
 see the <code>sampleVariance</code> method if you want a sample measure.</p>
 
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            <p>a population</p>
 
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>input</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2516,20 +1958,12 @@ see the <code>sampleVariance</code> method if you want a sample measure.</p>
 zero indicates that all values are identical.</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>ss.variance([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]); <span class="hljs-comment">//= 2.917</span></pre>
 </section>
-<section id='zscore' class='mb2 px1 py1'>
-  <h2 class='mt0'>
-    <a class='black' href='#zscore'>
-      <code>
-        zScore<span class='gray'>(x, mean, standardDeviation)</span>
-      </code>
-    </a>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='zscore' class='mt0'>
+    zScore<span class='gray'>(x, mean, standardDeviation)</span>
   </h2>
   <p>The <a href="http://en.wikipedia.org/wiki/Standard_score">Z-Score, or Standard Score</a>.</p>
 <p>The standard score is the number of standard deviations an observation
@@ -2544,39 +1978,27 @@ if one only has a sample set, then the analogous computation with
 sample mean and sample standard deviation yields the
 Student's t-statistic.</p>
 
-
-    <p>
-      <table class='table-light overflow-hidden bg-cloudy-light'>
-        <thead>
-          <th class='col-3'>parameter</th>
-          <th class='col-3'>type</th>
-          <th class='col-6'>description</th>
-        </thead>
-          <tr>
-            <td>x</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>mean</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>standardDeviation</td>
-            <td>
-              <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
-            </td>
-            <td></td>
-          </tr>
-      </table>
-    </p>
-
-
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>x</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>mean</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code> <strong>standardDeviation</strong>
+          :
+          <span class='force-inline'>
+            
+          </span>
+        </li>
+    </ul>
       <h4>Returns</h4>
       <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code></code>
       :
@@ -2584,18 +2006,15 @@ Student's t-statistic.</p>
         <p>z score</p>
 
       </span>
-
-
-
-
-
-
+    <h4>Examples</h4>
+<pre class='overflow-auto'>ss.zScore(<span class="hljs-number">78</span>, <span class="hljs-number">80</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">//= -0.4</span></pre>
 </section>
-
-          </div>
+</div>
         </div>
       </div>
     </div>
   </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
 </body>
 </html>

@@ -1,22 +1,14 @@
-body.simple-statistics {
-  font-family: 'Merriweather', Georgia, serif;
-  background: rgba(248, 245, 239, 1.0);
-}
-
-body.simple-statistics a {
-  color: #000;
-}
-
-body.simple-statistics p a {
-  text-decoration: underline;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
 .documentation a {
   color: #1184CE;
+}
+
+.documentation .suppress-p-margin p {
+  margin:0;
+}
+
+.force-inline p {
+  display: inline;
+  color: #222;
 }
 
 .container-small {
@@ -25,8 +17,8 @@ body.simple-statistics p a {
   margin-right: auto;
 }
 
-.font-smaller {
-  font-size:80%;
+.max-height-100 {
+  max-height: 100%;
 }
 
 .fade {
@@ -38,24 +30,20 @@ body.simple-statistics p a {
   font-size: 90%;
 }
 
-.section-smaller {
-  background:white;
+.section-indent {
+  border-left: 2px solid #eee;
+}
+
+.bg-cloudy {
+  background: #fafafa;
 }
 
 .force-inline * {
   display:inline;
 }
 
-section:target {
-  background: #fcfbf2;
-}
-
-.documentation-sidebar a:active {
-  background: #fcfbf2;
-}
-
-body.simple-statistics th {
-  font-weight: normal;
+section:target h3 {
+  font-weight:700;
 }
 
 .documentation,
@@ -64,14 +52,44 @@ body.simple-statistics th {
 .documentation h3,
 .documentation h4,
 .documentation h5,
-.documentation h6,
+.documentation h6 {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
 .documentation pre,
 .documentation code,
 .documentation samp {
-    font-family: 'Inconsolata', Consolas, 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 90%;
 }
 
 .documentation td,
 .documentation th {
     padding: .25rem .25rem;
+}
+
+h1:hover .anchorjs-link,
+h2:hover .anchorjs-link,
+h3:hover .anchorjs-link,
+h4:hover .anchorjs-link {
+  opacity: 1;
+}
+
+.collapsible .collapser {
+  display:none;
+}
+
+.collapsible:target .collapser {
+  display: block;
+}
+
+.fix-3 {
+  width: 25%;
+  max-width: 244px;
+}
+
+@media (min-width: 52em) {
+  .fix-margin-3 {
+    margin-left: 25%;
+  }
 }
