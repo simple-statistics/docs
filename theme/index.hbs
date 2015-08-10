@@ -1,42 +1,58 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>Simple Statistics | Documentation</title>
+  <title>{{options.name}} {{options.version}}</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
   <link href='assets/github.css' type='text/css' rel='stylesheet' />
 </head>
-<body class='documentation simple-statistics'>
+<body class='documentation'>
   <div class='container'>
-    <div class='clearfix flex flex-stretch mxn2'>
-      <div class='px2 py2 col-3 sm-show font-smaller bg-white'>
-        <div class=''>
-          <a href='/' class='px2 h2 block button-transparent mb3'>Simple Statistics</a>
-          <div class='px2 clearfix'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='px1 py1'>
+          <a href='http://simplestatistics.org/' class='h2 px2 button block button-transparent'>Simple Statistics</a>
+          <p class='px2 center'>
+            v1.0.0
+            <iframe src="https://ghbtns.com/github-btn.html?user=simple-statistics&amp;repo=simple-statistics&amp;type=star&amp;count=true&amp;size=small" frameborder="0" scrolling="0" width="100px" height="20px" style='vertical-align:middle'></iframe>
+          </p>
+          <p class='px2'>
+            Statistical methods in readable JavaScript for browsers, servers, and people.
+          </p>
+          <div class='px2'>
+            <input
+              placeholder='Filter'
+              id='filter-input'
+              class='col12 block field-light'
+              type='text' />
+          </div>
+          <div id='toc' class='px2'>
             {{#each docs}}
               <a
                 href='#{{permalink}}'
-                class='regular block'>
-                <code>{{name}}</code>
+                class='block bold'>
+                {{name}}
               </a>
               {{#each members.static}}
                 <a
                   href='#{{permalink}}'
-                  class='px1 regular block'>
-                  <code>.{{name}}</code>
+                  class='regular block'>
+                  .{{name}}
                 </a>
               {{/each}}
               {{#each members.instance}}
                 <a
                   href='#{{permalink}}'
-                  class='px1 regular block'>
-                  <code>#{{name}}</code>
+                  class='regular block'>
+                  #{{name}}
                 </a>
               {{/each}}
               {{#each events}}
                 <a
                   href='#{{permalink}}'
-                  class='px1 regular block'>
+                  class='regular block'>
                   <code>ⓔ {{name}}</code>
                 </a>
               {{/each}}
@@ -44,14 +60,14 @@
           </div>
         </div>
       </div>
-      <div class='sm-col-8'>
-        <div class='flex-auto full-width'>
-          <div class='px3 py2'>
-{{#each docs ~}}{{> section}}{{/each}}
-          </div>
+      <div class='fix-margin-3'>
+        <div class='px2'>
+{{#each docs ~}}<div class='py1'>{{> section}}</div>{{/each}}
         </div>
       </div>
     </div>
   </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
 </body>
 </html>

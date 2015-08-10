@@ -24,6 +24,6 @@
   "homepage": "https://github.com/simple-statistics/docs",
   "devDependencies": {
     "dev-documentation": "^2.1.0-alpha1",
-    "documentation": "^2.1.0-alpha1"
+    "documentation": "^2.1.0-alpha2"
   }
 }
