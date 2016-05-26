@@ -1,0 +1,83 @@
+toc:
+  - name: 'Basic Descriptive Statistics'
+  - min
+  - max
+  - sum
+  - sumSimple
+  - quantile
+  - product
+  - name: 'Sorted Basic Descriptive Statistics'
+    description: |
+      These are special versions of methods that assume your input
+      is sorted. This assumptions lets them run a lot faster, usually
+      in O(1).
+  - minSorted
+  - maxSorted
+  - quantileSorted
+  - name: 'Measures of central tendency'
+    description: |
+      These are different ways to identifying centers or locations of
+      a distribution.
+  - mean
+  - mode
+  - modeSorted
+  - median
+  - medianSorted
+  - harmonicMean
+  - geometricMean
+  - rootMeanSquare
+  - sampleSkewness
+  - name: 'Measures of dispersion'
+    description: |
+      These are different ways of determining how spread out a distribution is.
+  - variance
+  - sampleVariance
+  - standardDeviation
+  - sampleStandardDeviation
+  - medianAbsoluteDeviation
+  - interquartileRange
+  - sumNthPowerDeviations
+  - zScore
+  - name: 'Similarity'
+  - sampleCorrelation
+  - sampleCovariance
+  - rSquared
+  - name: 'Linear Regression'
+  - linearRegression
+  - linearRegressionLine
+  - name: 'Randomness'
+  - shuffle
+  - shuffleInPlace
+  - sample
+  - name: 'Classifiers'
+  - BayesianClassifier
+  - PerceptronModel
+  - name: 'Distributions'
+  - bernoulliDistribution
+  - binomialDistribution
+  - poissonDistribution
+  - chiSquaredDistributionTable
+  - standardNormalTable
+  - tTest
+  - tTestTwoSample
+  - cumulativeStdNormalProbability
+  - name: 'Errors'
+  - errorFunction
+  - inverseErrorFunction
+  - probit
+  - epsilon
+  - name: 'Breaks'
+    description: |
+      Breaks methods split datasets into chunks. Often these are used
+      for segmentation or visualization of a dataset. A method of computing
+      breaks that splits data evenly can make for a better choropleth map,
+      for instance, because each color will be represented equally.
+  - ckmeans
+  - equalIntervalBreaks
+  - name: 'Utilities'
+  - chunk
+  - mixin
+  - chiSquaredGoodnessOfFit
+  - epsilon
+  - factorial
+  - uniqueCountSorted
