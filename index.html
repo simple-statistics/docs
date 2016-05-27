@@ -788,7 +788,7 @@
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>min([<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">// -100</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>min([<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">// =&gt; -10</span></pre>
     
   
 
@@ -860,7 +860,8 @@
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-built_in">console</span>.log(max([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])); <span class="hljs-comment">// 4</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>max([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]);
+<span class="hljs-comment">// =&gt; 4</span></pre>
     
   
 
@@ -938,7 +939,7 @@ addition.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-built_in">console</span>.log(sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])); <span class="hljs-comment">// 6</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// =&gt; 6</span></pre>
     
   
 
@@ -1101,10 +1102,7 @@ quantiles in input order</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> data = [<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">20</span>];
-quantile(data, <span class="hljs-number">1</span>); <span class="hljs-comment">//= max(data);</span>
-quantile(data, <span class="hljs-number">0</span>); <span class="hljs-comment">//= min(data);</span>
-quantile(data, <span class="hljs-number">0.5</span>); <span class="hljs-comment">//= 9</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>quantile([<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">20</span>], <span class="hljs-number">0.5</span>); <span class="hljs-comment">// =&gt; 9</span></pre>
     
   
 
@@ -1177,7 +1175,7 @@ is the result of multiplying all numbers together, starting using one as the mul
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-built_in">console</span>.log(product([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])); <span class="hljs-comment">// 24</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>product([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">// =&gt; 24</span></pre>
     
   
 
@@ -1267,7 +1265,7 @@ can be done in one step, or constant time.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>minSorted([<span class="hljs-number">-100</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// -100</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>minSorted([<span class="hljs-number">-100</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// =&gt; -100</span></pre>
     
   
 
@@ -1340,7 +1338,7 @@ can be done in one step, or constant time.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>maxSorted([<span class="hljs-number">-100</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// 5</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>maxSorted([<span class="hljs-number">-100</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// =&gt; 5</span></pre>
     
   
 
@@ -1421,10 +1419,7 @@ are faster.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> data = [<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">20</span>];
-quantileSorted(data, <span class="hljs-number">1</span>); <span class="hljs-comment">//= max(data);</span>
-quantileSorted(data, <span class="hljs-number">0</span>); <span class="hljs-comment">//= min(data);</span>
-quantileSorted(data, <span class="hljs-number">0.5</span>); <span class="hljs-comment">//= 9</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>quantileSorted([<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">20</span>], <span class="hljs-number">0.5</span>); <span class="hljs-comment">// =&gt; 9</span></pre>
     
   
 
@@ -1515,7 +1510,7 @@ a method of finding a typical or central value of a set of numbers.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-built_in">console</span>.log(mean([<span class="hljs-number">0</span>, <span class="hljs-number">10</span>])); <span class="hljs-comment">// 5</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>mean([<span class="hljs-number">0</span>, <span class="hljs-number">10</span>]); <span class="hljs-comment">// =&gt; 5</span></pre>
     
   
 
@@ -1592,7 +1587,7 @@ before running an <code>O(n)</code> search to find the mode.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>mode([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//= 0</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>mode([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 0</span></pre>
     
   
 
@@ -1668,7 +1663,7 @@ a method of finding a typical or central value of a set of numbers.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>mode([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//= 0</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>modeSorted([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 0</span></pre>
     
   
 
@@ -1746,8 +1741,7 @@ and the two central values are different.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> incomes = [<span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
-median(incomes); <span class="hljs-comment">//= 3.5</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>median([<span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 3.5</span></pre>
     
   
 
@@ -1825,8 +1819,7 @@ and the two central values are different.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> incomes = [<span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
-median(incomes); <span class="hljs-comment">//= 3.5</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>medianSorted([<span class="hljs-number">10</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 52.5</span></pre>
     
   
 
@@ -1903,7 +1896,7 @@ a method of finding a typical or central value of a set of numbers.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>ss.harmonicMean([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">//= 2.4</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>harmonicMean([<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]).toFixed(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; '2.40'</span></pre>
     
   
 
@@ -2148,8 +2141,7 @@ statistical packages including Minitab, SAS and SPSS.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> data = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>];
-sampleSkewness(data); <span class="hljs-comment">//= 0.5901286564</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>sampleSkewness([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 0.590128656384365</span></pre>
     
   
 
@@ -2239,7 +2231,7 @@ zero indicates that all values are identical.
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>ss.variance([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]); <span class="hljs-comment">//= 2.917</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>variance([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]); <span class="hljs-comment">// =&gt; 2.9166666666666665</span></pre>
     
   
 
@@ -2463,7 +2455,7 @@ dispersion. It is more resilient to outliers than the standard deviation.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>mad([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>]); <span class="hljs-comment">//= 1</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>medianAbsoluteDeviation([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>]); <span class="hljs-comment">// =&gt; 1</span></pre>
     
   
 
@@ -2537,7 +2529,7 @@ the third quartile and first quartile.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>interquartileRange([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">//= 2</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>interquartileRange([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// =&gt; 2</span></pre>
     
   
 
@@ -2715,7 +2707,7 @@ Student&#x27;s t-statistic.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>ss.zScore(<span class="hljs-number">78</span>, <span class="hljs-number">80</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">//= -0.4</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>zScore(<span class="hljs-number">78</span>, <span class="hljs-number">80</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">// =&gt; -0.4</span></pre>
     
   
 
@@ -2890,9 +2882,7 @@ x and y are two datasets, represented as arrays of numbers.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> x = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
-<span class="hljs-keyword">var</span> y = [<span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>];
-sampleCovariance(x, y); <span class="hljs-comment">//= -3.5</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>sampleCovariance([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], [<span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; -3.5</span></pre>
     
   
 
@@ -2978,7 +2968,7 @@ and the actual value.</p>
       
       <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> samples = [[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]];
 <span class="hljs-keyword">var</span> regressionLine = linearRegressionLine(linearRegression(samples));
-rSquared(samples, regressionLine); <span class="hljs-comment">//= 1 this line is a perfect fit</span></pre>
+rSquared(samples, regressionLine); <span class="hljs-comment">// = 1 this line is a perfect fit</span></pre>
     
   
 
@@ -3066,7 +3056,7 @@ like
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>linearRegression([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]); <span class="hljs-comment">// { m: 1, b: 0 }</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>linearRegression([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]); <span class="hljs-comment">// =&gt; { m: 1, b: 0 }</span></pre>
     
   
 
@@ -3779,6 +3769,12 @@ where <code>n</code> = 1.</p>
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>bernoulliDistribution(<span class="hljs-number">0.5</span>); <span class="hljs-comment">// =&gt; { '0': 0.5, '1': 0.5 }</span></pre>
+    
+  
 
   
 
@@ -4370,7 +4366,7 @@ normal distribution with standard deviation sd is within x of the mean.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>errorFunction(<span class="hljs-number">1</span>); <span class="hljs-comment">//= 0.8427</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>errorFunction(<span class="hljs-number">1</span>).toFixed(<span class="hljs-number">2</span>); <span class="hljs-comment">// =&gt; '0.84'</span></pre>
     
   
 
@@ -4808,7 +4804,8 @@ The <code>sample</code> array can contain any kind of data.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-built_in">console</span>.log(chunk([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">2</span>)); <span class="hljs-comment">// [[1, 2], [3, 4]]</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>chunk([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">2</span>);
+<span class="hljs-comment">// =&gt; [[1, 2], [3, 4]]</span></pre>
     
   
 
@@ -5149,7 +5146,7 @@ and simpler.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-built_in">console</span>.log(factorial(<span class="hljs-number">5</span>)); <span class="hljs-comment">// 120</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>factorial(<span class="hljs-number">5</span>); <span class="hljs-comment">// =&gt; 120</span></pre>
     
   
 
