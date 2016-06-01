@@ -1012,7 +1012,7 @@ is the result of adding all numbers together, starting from zero.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-built_in">console</span>.log(sum([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])); <span class="hljs-comment">// 6</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>sumSimple([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// =&gt; 6</span></pre>
     
   
 
@@ -2064,7 +2064,7 @@ This runs on <code>O(n)</code>, linear time in respect to the array</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>rootMeanSquare([<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">//= 1</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>rootMeanSquare([<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 1</span></pre>
     
   
 
@@ -2307,9 +2307,8 @@ more appropriate.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> scores = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>];
-variance(scores); <span class="hljs-comment">//= 4</span>
-standardDeviation(scores); <span class="hljs-comment">//= 2</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>variance([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]); <span class="hljs-comment">// =&gt; 4</span>
+standardDeviation([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]); <span class="hljs-comment">// =&gt; 2</span></pre>
     
   
 
@@ -2381,8 +2380,8 @@ is the square root of the variance.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>ss.sampleStandardDeviation([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]);
-<span class="hljs-comment">//= 2.138</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>sampleStandardDeviation([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>]).toFixed(<span class="hljs-number">2</span>);
+<span class="hljs-comment">// =&gt; '2.14'</span></pre>
     
   
 
@@ -2799,9 +2798,8 @@ a measure of how correlated two datasets are, between -1 and 1</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
-<span class="hljs-keyword">var</span> b = [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">60</span>];
-sampleCorrelation(a, b); <span class="hljs-comment">//= 0.691</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>sampleCorrelation([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">60</span>]).toFixed(<span class="hljs-number">2</span>);
+<span class="hljs-comment">// =&gt; '0.69'</span></pre>
     
   
 
@@ -3137,8 +3135,10 @@ x-value on the line.
     
       
       <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> l = linearRegressionLine(linearRegression([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]]));
-l(<span class="hljs-number">0</span>) <span class="hljs-comment">//= 0</span>
-l(<span class="hljs-number">2</span>) <span class="hljs-comment">//= 2</span></pre>
+l(<span class="hljs-number">0</span>) <span class="hljs-comment">// = 0</span>
+l(<span class="hljs-number">2</span>) <span class="hljs-comment">// = 2</span>
+linearRegressionLine({ b: <span class="hljs-number">0</span>, m: <span class="hljs-number">1</span> })(<span class="hljs-number">1</span>); <span class="hljs-comment">// =&gt; 1</span>
+linearRegressionLine({ b: <span class="hljs-number">1</span>, m: <span class="hljs-number">1</span> })(<span class="hljs-number">1</span>); <span class="hljs-comment">// =&gt; 2</span></pre>
     
   
 
@@ -3769,13 +3769,13 @@ where <code>n</code> = 1.</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
       <pre class='p1 overflow-auto round fill-light'>bernoulliDistribution(<span class="hljs-number">0.5</span>); <span class="hljs-comment">// =&gt; { '0': 0.5, '1': 0.5 }</span></pre>
     
-  
-
   
 
   
@@ -4109,7 +4109,7 @@ null hypothesis can or cannot be rejected.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>tTest([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], <span class="hljs-number">3.385</span>); <span class="hljs-comment">//= 0.16494154</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>tTest([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], <span class="hljs-number">3.385</span>).toFixed(<span class="hljs-number">2</span>); <span class="hljs-comment">// =&gt; '0.16'</span></pre>
     
   
 
@@ -5221,8 +5221,8 @@ are not handled in any special way.</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>uniqueCountSorted([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// 3</span>
-uniqueCountSorted([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// 1</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>uniqueCountSorted([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// =&gt; 3</span>
+uniqueCountSorted([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 1</span></pre>
     
   
 
