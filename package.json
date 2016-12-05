@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/simple-statistics/docs",
   "devDependencies": {
-    "documentation": "^4.0.0-beta3"
+    "documentation": "4.0.0-beta15"
   }
 }
