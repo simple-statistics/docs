@@ -48,6 +48,7 @@ toc:
   - name: 'Randomness'
   - shuffle
   - shuffleInPlace
+  - sampleWithReplacement
   - sample
   - name: 'Classifiers'
   - BayesianClassifier

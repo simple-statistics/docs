@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simple-statistics</h3>
-          <div class='mb1'><code>2.1.0</code></div>
+          <div class='mb1'><code>2.3.0</code></div>
           <p>Statistical methods in readable JavaScript for browsers, servers, and people.</p>
           <p>
           <small>
@@ -426,6 +426,16 @@
                   href='#shuffleinplace'
                   class="">
                   shuffleInPlace
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#samplewithreplacement'
+                  class="">
+                  sampleWithReplacement
                   
                 </a>
                 
@@ -3469,7 +3479,8 @@ it will not modify its input.</p>
           <div>
             <span class='code bold'>randomSource</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?
             = <code>Math.random</code>)</code>
-	    an optional entropy source
+	    an optional entropy source that
+returns numbers between 0 inclusive and 1 exclusive: the range [0, 1)
 
           </div>
           
@@ -3558,7 +3569,8 @@ of a set.</p>
           <div>
             <span class='code bold'>randomSource</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?
             = <code>Math.random</code>)</code>
-	    an optional source of entropy
+	    an optional entropy source that
+returns numbers between 0 inclusive and 1 exclusive: the range [0, 1)
 
           </div>
           
@@ -3588,6 +3600,102 @@ of a set.</p>
       <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> sample = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 shuffleInPlace(sample);
 <span class="hljs-comment">// sample is shuffled to a value like [2, 1, 4, 3]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='samplewithreplacement'>
+      sampleWithReplacement
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Sampling with replacement is a type of sampling that allows the same
+item to be picked out of a population more than once.</p>
+
+
+  <div class='pre p1 fill-light mt0'>sampleWithReplacement(population: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>population</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    an array of any kind of element
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    count of how many elements to take
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>randomSource</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?
+            = <code>Math.random</code>)</code>
+	    an optional entropy source that
+returns numbers between 0 inclusive and 1 exclusive: the range [0, 1)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        n sampled items from the population
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> sample = sampleWithReplacement([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], <span class="hljs-number">2</span>);
+sampleWithReplacement; <span class="hljs-comment">// = [2, 4] or any other random sample of 2 items</span></pre>
     
   
 
@@ -3656,8 +3764,8 @@ they appear in the input.</p>
           <div>
             <span class='code bold'>randomSource</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?
             = <code>Math.random</code>)</code>
-	    an optional source of entropy
-instead of Math.random
+	    an optional entropy source that
+returns numbers between 0 inclusive and 1 exclusive: the range [0, 1)
 
           </div>
           
