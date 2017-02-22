@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>simple-statistics 2.1.0 | Documentation</title>
+  <title>simple-statistics 2.4.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simple-statistics</h3>
-          <div class='mb1'><code>2.3.0</code></div>
+          <div class='mb1'><code>2.4.0</code></div>
           <p>Statistical methods in readable JavaScript for browsers, servers, and people.</p>
           <p>
           <small>
@@ -23,6 +23,7 @@
             <code>ss</code>, so call <code>ss.min()</code> for the <code>min</code> method.
           </small>
           </p>
+
           <input
             placeholder='Filter'
             id='filter-input'
@@ -176,6 +177,16 @@
                   href='#modesorted'
                   class="">
                   modeSorted
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#modefast'
+                  class="">
+                  modeFast
                   
                 </a>
                 
@@ -1790,6 +1801,98 @@ a method of finding a typical or central value of a set of numbers.</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>modeSorted([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]); <span class="hljs-comment">// =&gt; 0</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='modefast'>
+      modeFast
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The <a href="http://bit.ly/W5K4Yt">mode</a> is the number that appears in a list the highest number of times.
+There can be multiple modes in a list: in the event of a tie, this
+algorithm will return the most recently seen mode.</p>
+<p>modeFast uses a Map object to keep track of the mode, instead of the approach
+used with <code>mode</code>, a sorted array. As a result, it is faster
+than <code>mode</code> and supports any data type that can be compared with <code>==</code>.
+It also requires a
+<a href="https://kangax.github.io/compat-table/es6/#test-Map">JavaScript environment with support for Map</a>,
+and will throw an error if Map is not available.</p>
+<p>This is a <a href="https://en.wikipedia.org/wiki/Central_tendency">measure of central tendency</a>:
+a method of finding a typical or central value of a set of numbers.</p>
+
+
+  <div class='pre p1 fill-light mt0'>modeFast(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>): any?</div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
+	    input
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any?</code>:
+        mode
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a>: if the JavaScript environment doesn't support Map
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>modeFast([<span class="hljs-string">'rabbits'</span>, <span class="hljs-string">'rabbits'</span>, <span class="hljs-string">'squirrels'</span>]); <span class="hljs-comment">// =&gt; 'rabbits'</span></pre>
     
   
 

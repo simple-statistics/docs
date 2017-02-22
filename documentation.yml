@@ -21,6 +21,7 @@ toc:
   - mean
   - mode
   - modeSorted
+  - modeFast
   - median
   - medianSorted
   - harmonicMean
