@@ -19,6 +19,7 @@ toc:
       These are different ways to identifying centers or locations of
       a distribution.
   - mean
+  - addToMean
   - mode
   - modeSorted
   - modeFast

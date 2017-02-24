@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "documentation watch ./simple-statistics",
-    "build": "documentation build ./simple-statistics --project-version='2.4.0' --name 'simple-statistics' -f html -o . -c documentation.yml"
+    "build": "documentation build ./simple-statistics --project-version='2.5.0' --name 'simple-statistics' -f html -o . -c documentation.yml"
   },
   "repository": {
     "type": "git",
