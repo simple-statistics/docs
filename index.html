@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simple-statistics</h3>
-          <div class='mb1'><code>2.5.0</code></div>
+          <div class='mb1'><code>3.0.0</code></div>
           <p>Statistical methods in readable JavaScript for browsers, servers, and people.</p>
           <p>
           <small>
@@ -23,8 +23,6 @@
             <code>ss</code>, so call <code>ss.min()</code> for the <code>min</code> method.
           </small>
           </p>
-
-
           <input
             placeholder='Filter'
             id='filter-input'
@@ -811,6 +809,36 @@
               
                 
                 <li><a
+                  href='#combinemeans'
+                  class="">
+                  combineMeans
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#combinevariances'
+                  class="">
+                  combineVariances
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#subtractfrommean'
+                  class="">
+                  subtractFromMean
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#bisect'
                   class="">
                   bisect
@@ -874,7 +902,7 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input
+	    sample of one or more data points
 
           </div>
           
@@ -895,6 +923,14 @@
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+</li>
+      
+    </ul>
   
 
   
@@ -949,7 +985,7 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input
+	    sample of one or more data points
 
           </div>
           
@@ -970,6 +1006,14 @@
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+</li>
+      
+    </ul>
   
 
   
@@ -1175,7 +1219,7 @@ When p is an array, the result of the function is also an array containing the a
 quantiles in input order</p>
 
 
-  <div class='pre p1 fill-light mt0'>quantile(sample: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, p: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  <div class='pre p1 fill-light mt0'>quantile(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, p: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
 
   
 
@@ -1191,8 +1235,8 @@ quantiles in input order</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sample</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    a sample from the population
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    sample of one or more numbers
 
           </div>
           
@@ -1505,7 +1549,7 @@ that the order is sorted, you don't need to re-sort it, and the computations
 are faster.</p>
 
 
-  <div class='pre p1 fill-light mt0'>quantileSorted(sample: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, p: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  <div class='pre p1 fill-light mt0'>quantileSorted(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, p: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
 
   
 
@@ -1521,8 +1565,8 @@ are faster.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sample</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input data
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    sample of one or more data points
 
           </div>
           
@@ -1552,6 +1596,17 @@ are faster.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if p ix outside of the range from 0 to 1
+</li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x is empty
+</li>
+      
+    </ul>
   
 
   
@@ -1625,7 +1680,7 @@ a method of finding a typical or central value of a set of numbers.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input values
+	    sample of one or more data points
 
           </div>
           
@@ -1646,6 +1701,14 @@ a method of finding a typical or central value of a set of numbers.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+</li>
+      
+    </ul>
   
 
   
@@ -1880,7 +1943,7 @@ a method of finding a typical or central value of a set of numbers.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>sorted</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input
+	    a sample of one or more data points
 
           </div>
           
@@ -1901,6 +1964,14 @@ a method of finding a typical or central value of a set of numbers.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if sorted is empty
+</li>
+      
+    </ul>
   
 
   
@@ -1964,7 +2035,7 @@ a method of finding a typical or central value of a set of numbers.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
-	    input
+	    a sample of one or more data points
 
           </div>
           
@@ -1990,6 +2061,9 @@ a method of finding a typical or central value of a set of numbers.</p>
     <ul>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a>: if the JavaScript environment doesn't support Map
+</li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x is empty
 </li>
       
     </ul>
@@ -2214,7 +2288,7 @@ a method of finding a typical or central value of a set of numbers.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input
+	    sample of one or more data points
 
           </div>
           
@@ -2235,6 +2309,17 @@ a method of finding a typical or central value of a set of numbers.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x is empty
+</li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x contains a negative number
+</li>
+      
+    </ul>
   
 
   
@@ -2298,7 +2383,7 @@ will yield the same end value.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input array
+	    sample of one or more data points
 
           </div>
           
@@ -2319,6 +2404,17 @@ will yield the same end value.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x is empty
+</li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x contains a negative number
+</li>
+      
+    </ul>
   
 
   
@@ -2388,7 +2484,7 @@ This runs on <code>O(n)</code>, linear time in respect to the array</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input
+	    a sample of one or more data points
 
           </div>
           
@@ -2409,6 +2505,14 @@ This runs on <code>O(n)</code>, linear time in respect to the array</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x is empty
+</li>
+      
+    </ul>
   
 
   
@@ -2468,7 +2572,7 @@ statistical packages including Minitab, SAS and SPSS.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input
+	    a sample of 3 or more data points
 
           </div>
           
@@ -2489,6 +2593,14 @@ statistical packages including Minitab, SAS and SPSS.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x has length of 3 or less
+</li>
+      
+    </ul>
   
 
   
@@ -2560,7 +2672,7 @@ see the <code>sampleVariance</code> method if you want a sample measure.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    a population
+	    a population of one or more data points
 
           </div>
           
@@ -2582,6 +2694,14 @@ zero indicates that all values are identical.
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x's length is 0
+</li>
+      
+    </ul>
   
 
   
@@ -2644,7 +2764,7 @@ a value from a set that you don't know if full.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input array
+	    a sample of two or more data points
 
           </div>
           
@@ -2665,6 +2785,14 @@ a value from a set that you don't know if full.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the length of x is less than 2
+</li>
+      
+    </ul>
   
 
   
@@ -2699,7 +2827,8 @@ a value from a set that you don't know if full.</p>
   
 
   <p>The <a href="http://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a>
-is the square root of the variance. It's useful for measuring the amount
+is the square root of the variance. This is also known as the population
+standard deviation. It's useful for measuring the amount
 of variation or dispersion in a set of values.</p>
 <p>Standard deviation is only appropriate for full-population knowledge: for
 samples of a population, <a href="#samplestandarddeviation">sampleStandardDeviation</a> is
@@ -2936,7 +3065,7 @@ concentrated a distribution is. It's computed as the difference between
 the third quartile and first quartile.</p>
 
 
-  <div class='pre p1 fill-light mt0'>interquartileRange(sample: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  <div class='pre p1 fill-light mt0'>interquartileRange(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
 
   
 
@@ -2952,8 +3081,9 @@ the third quartile and first quartile.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sample</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    sample of one or more numbers
+
           </div>
           
         </div>
@@ -3313,7 +3443,7 @@ x and y are two datasets, represented as arrays of numbers.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    first input
+	    a sample of two or more data points
 
           </div>
           
@@ -3322,7 +3452,7 @@ x and y are two datasets, represented as arrays of numbers.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    second input
+	    a sample of two or more data points
 
           </div>
           
@@ -3343,6 +3473,17 @@ x and y are two datasets, represented as arrays of numbers.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x and y do not have equal lengths
+</li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x or y have length of one or less
+</li>
+      
+    </ul>
   
 
   
@@ -3382,7 +3523,7 @@ is the sum of the squared differences between the prediction
 and the actual value.</p>
 
 
-  <div class='pre p1 fill-light mt0'>rSquared(data: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>>, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  <div class='pre p1 fill-light mt0'>rSquared(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>>, func: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
 
   
 
@@ -3398,7 +3539,7 @@ and the actual value.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>data</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>>)</code>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>>)</code>
 	    input data: this should be doubly-nested
 
           </div>
@@ -3662,7 +3803,7 @@ a function around <code>shuffle_in_place</code> that adds the guarantee that
 it will not modify its input.</p>
 
 
-  <div class='pre p1 fill-light mt0'>shuffle(sample: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  <div class='pre p1 fill-light mt0'>shuffle(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
 
   
 
@@ -3678,8 +3819,8 @@ it will not modify its input.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sample</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    an array of any kind of element
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    sample of 0 or more numbers
 
           </div>
           
@@ -3752,7 +3893,7 @@ array by reference</strong>.</p>
 of a set.</p>
 
 
-  <div class='pre p1 fill-light mt0'>shuffleInPlace(sample: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  <div class='pre p1 fill-light mt0'>shuffleInPlace(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
 
   
 
@@ -3768,8 +3909,8 @@ of a set.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sample</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    input array
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    sample of one or more numbers
 
           </div>
           
@@ -3795,7 +3936,7 @@ returns numbers between 0 inclusive and 1 exclusive: the range [0, 1)
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
-        sample
+        x
 
       
     
@@ -3807,9 +3948,9 @@ returns numbers between 0 inclusive and 1 exclusive: the range [0, 1)
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> sample = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
-shuffleInPlace(sample);
-<span class="hljs-comment">// sample is shuffled to a value like [2, 1, 4, 3]</span></pre>
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> x = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+shuffleInPlace(x);
+<span class="hljs-comment">// x is shuffled to a value like [2, 1, 4, 3]</span></pre>
     
   
 
@@ -3840,7 +3981,7 @@ shuffleInPlace(sample);
 item to be picked out of a population more than once.</p>
 
 
-  <div class='pre p1 fill-light mt0'>sampleWithReplacement(population: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  <div class='pre p1 fill-light mt0'>sampleWithReplacement(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
 
   
 
@@ -3856,8 +3997,8 @@ item to be picked out of a population more than once.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>population</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    an array of any kind of element
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
+	    an array of any kind of value
 
           </div>
           
@@ -3938,7 +4079,7 @@ from a given array of <code>n</code> elements.</p>
 they appear in the input.</p>
 
 
-  <div class='pre p1 fill-light mt0'>sample(array: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  <div class='pre p1 fill-light mt0'>sample(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, randomSource: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
 
   
 
@@ -3954,7 +4095,7 @@ they appear in the input.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
 	    input array. can contain any type
 
           </div>
@@ -4537,6 +4678,14 @@ where <code>n</code> = 1.</p>
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if p is outside 0 and 1
+</li>
+      
+    </ul>
+  
 
   
     <div class='py1 quiet mt1 prose-big'>Example</div>
@@ -4839,7 +4988,7 @@ a certain level of significance, will let you determine that the
 null hypothesis can or cannot be rejected.</p>
 
 
-  <div class='pre p1 fill-light mt0'>tTest(sample: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  <div class='pre p1 fill-light mt0'>tTest(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, expectedValue: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
 
   
 
@@ -4855,8 +5004,8 @@ null hypothesis can or cannot be rejected.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sample</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    an array of numbers as input
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    sample of one or more numbers
 
           </div>
           
@@ -4864,7 +5013,7 @@ null hypothesis can or cannot be rejected.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+            <span class='code bold'>expectedValue</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    expected value of the population mean
 
           </div>
@@ -5374,7 +5523,7 @@ Programming</em> Haizhou Wang and Mingzhou Song ISSN 2073-4859</p>
 <p>from The R Journal Vol. 3/2, December 2011</p>
 
 
-  <div class='pre p1 fill-light mt0'>ckmeans(data: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, nClusters: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>></div>
+  <div class='pre p1 fill-light mt0'>ckmeans(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, nClusters: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>></div>
 
   
 
@@ -5390,7 +5539,7 @@ Programming</em> Haizhou Wang and Mingzhou Song ISSN 2073-4859</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>data</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
 	    input data, as an array of number values
 
           </div>
@@ -5422,6 +5571,14 @@ greater than the number of values in the data array.
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the number of requested clusters is higher than the size of the data
+</li>
+      
+    </ul>
   
 
   
@@ -5457,14 +5614,14 @@ greater than the number of values in the data array.
   </div>
   
 
-  <p>Given an array of data, this will find the extent of the
-data and return an array of breaks that can be used
-to categorize the data into a number of classes. The
+  <p>Given an array of x, this will find the extent of the
+x and return an array of breaks that can be used
+to categorize the x into a number of classes. The
 returned array will always be 1 longer than the number of
 classes because it includes the minimum value.</p>
 
 
-  <div class='pre p1 fill-light mt0'>equalIntervalBreaks(data: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, nClasses: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></div>
+  <div class='pre p1 fill-light mt0'>equalIntervalBreaks(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, nClasses: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></div>
 
   
 
@@ -5480,8 +5637,8 @@ classes because it includes the minimum value.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>data</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
-	    input data, as an array of number values
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    an array of number values
 
           </div>
           
@@ -5560,11 +5717,11 @@ classes because it includes the minimum value.</p>
 has the same behavior as <a href="http://php.net/manual/en/function.array-chunk.php">PHP's array_chunk</a>
 function, and thus will insert smaller-sized chunks at the end if
 the input size is not divisible by the chunk size.</p>
-<p><code>sample</code> is expected to be an array, and <code>chunkSize</code> a number.
-The <code>sample</code> array can contain any kind of data.</p>
+<p><code>x</code> is expected to be an array, and <code>chunkSize</code> a number.
+The <code>x</code> array can contain any kind of data.</p>
 
 
-  <div class='pre p1 fill-light mt0'>chunk(sample: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, chunkSize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
+  <div class='pre p1 fill-light mt0'>chunk(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, chunkSize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
 
   
 
@@ -5580,8 +5737,8 @@ The <code>sample</code> array can contain any kind of data.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>sample</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    any array of values
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    a sample
 
           </div>
           
@@ -5590,7 +5747,7 @@ The <code>sample</code> array can contain any kind of data.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>chunkSize</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-	    size of each output array
+	    size of each output array. must be a positive integer
 
           </div>
           
@@ -5611,6 +5768,14 @@ The <code>sample</code> array can contain any kind of data.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if chunk size is less than 1 or not an integer
+</li>
+      
+    </ul>
   
 
   
@@ -5703,6 +5868,14 @@ is given.
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the JavaScript environment doesn't support Object.defineProperty
+</li>
+      
+    </ul>
   
 
   
@@ -5946,7 +6119,7 @@ and simpler.</p>
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-	    input
+	    input, must be an integer number 1 or greater
 
           </div>
           
@@ -5967,6 +6140,14 @@ and simpler.</p>
     
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if n is less than 0 or not an integer
+</li>
+      
+    </ul>
   
 
   
@@ -6007,7 +6188,7 @@ a simple implementation of the algorithm.</p>
 are not handled in any special way.</p>
 
 
-  <div class='pre p1 fill-light mt0'>uniqueCountSorted(input: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  <div class='pre p1 fill-light mt0'>uniqueCountSorted(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
 
   
 
@@ -6023,8 +6204,8 @@ are not handled in any special way.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>input</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
-	    an array of primitive values.
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
+	    an array of any kind of value
 
           </div>
           
@@ -6149,11 +6330,11 @@ for generating permutations.</p>
   
 
   <p>Implementation of Combinations
-Combinations are unique subsets of a collection - in this case, k elements from a collection at a time.
+Combinations are unique subsets of a collection - in this case, k x from a collection at a time.
 <a href="https://en.wikipedia.org/wiki/Combination">https://en.wikipedia.org/wiki/Combination</a></p>
 
 
-  <div class='pre p1 fill-light mt0'>combinations(elements: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, k: int): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
+  <div class='pre p1 fill-light mt0'>combinations(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, k: int): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
 
   
 
@@ -6169,7 +6350,7 @@ Combinations are unique subsets of a collection - in this case, k elements from 
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>elements</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
 	    any type of data
 
           </div>
@@ -6234,12 +6415,12 @@ Combinations are unique subsets of a collection - in this case, k elements from 
   
 
   <p>Implementation of <a href="https://en.wikipedia.org/wiki/Combination">Combinations</a> with replacement
-Combinations are unique subsets of a collection - in this case, k elements from a collection at a time.
+Combinations are unique subsets of a collection - in this case, k x from a collection at a time.
 'With replacement' means that a given element can be chosen multiple times.
 Unlike permutation, order doesn't matter for combinations.</p>
 
 
-  <div class='pre p1 fill-light mt0'>combinationsReplacement(elements: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, k: int): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
+  <div class='pre p1 fill-light mt0'>combinationsReplacement(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, k: int): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
 
   
 
@@ -6255,7 +6436,7 @@ Unlike permutation, order doesn't matter for combinations.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>elements</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
 	    any type of data
 
           </div>
@@ -6293,6 +6474,329 @@ Unlike permutation, order doesn't matter for combinations.</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>combinationsReplacement([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">2</span>); <span class="hljs-comment">// =&gt; [[1, 1], [1, 2], [2, 2]]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='combinemeans'>
+      combineMeans
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>When combining two lists of values for which one already knows the means,
+one does not have to necessary recompute the mean of the combined lists in
+linear time. They can instead use this function to compute the combined
+mean by providing the mean &#x26; number of values of the first list and the mean
+&#x26; number of values of the second list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>combineMeans(mean1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, n1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, mean2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, n2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mean1</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    mean of the first list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n1</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    number of items in the first list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mean2</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    mean of the second list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n2</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    number of items in the second list
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        the combined mean
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>combineMeans(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// =&gt; 4.5</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='combinevariances'>
+      combineVariances
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>When combining two lists of values for which one already knows the variances,
+one does not have to necessary recompute the variance of the combined lists
+in linear time. They can instead use this function to compute the combined
+variance by providing the variance, mean &#x26; number of values of the first list
+and the variance, mean &#x26; number of values of the second list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>combineVariances(variance1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, mean1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, n1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, variance2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, mean2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, n2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>variance1</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    variance of the first list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mean1</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    mean of the first list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n1</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    number of items in the first list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>variance2</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    variance of the second list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mean2</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    mean of the second list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n2</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    number of items in the second list
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        the combined mean
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>combineVariances(<span class="hljs-number">14</span> / <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span> / <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// =&gt; 47 / 12</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='subtractfrommean'>
+      subtractFromMean
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>When removing a value from a list, one does not have to necessary
+recompute the mean of the list in linear time. They can instead use
+this function to compute the new mean by providing the current mean,
+the number of elements in the list that produced it and the value to remove.</p>
+
+
+  <div class='pre p1 fill-light mt0'>subtractFromMean(mean: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mean</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    current mean
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    number of items in the list
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    the value to remove
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        the new mean
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>subtractFromMean(<span class="hljs-number">20.5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">53</span>); <span class="hljs-comment">// =&gt; 14</span></pre>
     
   
 
