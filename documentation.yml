@@ -79,7 +79,6 @@ toc:
   - equalIntervalBreaks
   - name: 'Utilities'
   - chunk
-  - mixin
   - chiSquaredGoodnessOfFit
   - epsilon
   - factorial
