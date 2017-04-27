@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>simple-statistics 4.0.0 | Documentation</title>
+  <title>simple-statistics 4.1.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simple-statistics</h3>
-          <div class='mb1'><code>4.0.0</code></div>
+          <div class='mb1'><code>4.1.0</code></div>
           <p>Statistical methods in readable JavaScript for browsers, servers, and people.</p>
           <p>
           <small>
@@ -824,6 +824,16 @@
                   href='#permutationsheap'
                   class="">
                   permutationsHeap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#samplekurtosis'
+                  class="">
+                  sampleKurtosis
                   
                 </a>
                 
@@ -1762,7 +1772,7 @@ value to add.</p>
   
   
   
-  
+  <div>Since: 2.5.0</div>
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
@@ -2577,7 +2587,7 @@ statistical packages including Minitab, SAS and SPSS.</p>
   
   
   
-  
+  <div>Since: 4.1.0</div>
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
@@ -2611,7 +2621,7 @@ statistical packages including Minitab, SAS and SPSS.</p>
     <div class='py1 quiet mt1 prose-big'>Throws</div>
     <ul>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x has length of 3 or less
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x has length less than 3
 </li>
       
     </ul>
@@ -6524,7 +6534,7 @@ mean by providing the mean &#x26; number of values of the first list and the mea
   
   
   
-  
+  <div>Since: 3.0.0</div>
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
@@ -6630,7 +6640,7 @@ and the variance, mean &#x26; number of values of the second list.</p>
   
   
   
-  
+  <div>Since: 3.0.0</div>
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
@@ -6800,6 +6810,94 @@ for generating permutations.</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='samplekurtosis'>
+      sampleKurtosis
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><a href="http://en.wikipedia.org/wiki/Kurtosis">Kurtosis</a> is
+a measure of the heaviness of a distribution's tails relative to its
+variance. The kurtosis value can be positive or negative, or even undefined.</p>
+<p>Implementation is based on Fisher's excess kurtosis definition and uses
+unbiased moment estimators. This is the version found in Excel and available
+in several statistical packages, including SAS and SciPy.</p>
+
+
+  <div class='pre p1 fill-light mt0'>sampleKurtosis(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    a sample of 4 or more data points
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        sample kurtosis
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if x has length less than 4
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>sampleKurtosis([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// =&gt; 1.4555765595463122</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='subtractfrommean'>
       subtractFromMean
     </h3>
@@ -6823,7 +6921,7 @@ the number of elements in the list that produced it and the value to remove.</p>
   
   
   
-  
+  <div>Since: 3.0.0</div>
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
