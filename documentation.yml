@@ -64,6 +64,7 @@ toc:
   - tTest
   - tTestTwoSample
   - cumulativeStdNormalProbability
+  - kde
   - name: 'Errors'
   - errorFunction
   - inverseErrorFunction

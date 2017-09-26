@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "documentation watch ./simple-statistics",
-    "build": "documentation build ./simple-statistics --project-version='2.5.0' --name 'simple-statistics' -f html -o . -c documentation.yml"
+    "build": "documentation build ./simple-statistics/src/* --project-version='5.0.0' --project-name 'simple-statistics' -f html -o . -c documentation.yml"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/simple-statistics/docs",
   "devDependencies": {
-    "documentation": "4.0.0-rc.0"
+    "documentation": "^5.3.2"
   }
 }
