@@ -125,7 +125,7 @@ Split(['#split-left', '#split-right'], {
     };
   },
   gutterSize: 20,
-  sizes: [30, 70]
+  sizes: [33, 67]
 });
 
 // Chrome doesn't remember scroll position properly so do it ourselves.

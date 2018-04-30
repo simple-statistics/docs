@@ -64,7 +64,7 @@ toc:
   - tTest
   - tTestTwoSample
   - cumulativeStdNormalProbability
-  - kde
+  - kernelDensityEstimation
   - name: 'Errors'
   - errorFunction
   - inverseErrorFunction
@@ -83,4 +83,5 @@ toc:
   - chiSquaredGoodnessOfFit
   - epsilon
   - factorial
+  - gamma
   - uniqueCountSorted
