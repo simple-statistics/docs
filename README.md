@@ -24,5 +24,5 @@ npm start
 This builds a production-ready website.
 
 ```
-npm build
+npm run build
 ```
